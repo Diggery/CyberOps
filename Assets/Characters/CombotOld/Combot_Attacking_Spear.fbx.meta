@@ -1,0 +1,1533 @@
+fileFormatVersion: 2
+guid: 60592e5e0461947caaf92a67dec26d0d
+timeCreated: 1489248914
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Combot:Combot_Geometry
+    100002: Combot:Combot_Skeleton
+    100004: Combot:Head_Geo
+    100006: Combot:Head_Skel
+    100008: Combot:Hips_Skel
+    100010: Combot:LeftArm_Geo
+    100012: Combot:LeftClav_Skel
+    100014: Combot:LeftFoot_Skel
+    100016: Combot:LeftHand_Attach
+    100018: Combot:LeftHand_Skel
+    100020: Combot:LeftLowerArm_Skel
+    100022: Combot:LeftLowerLeg_Skel
+    100024: Combot:LeftShoulder_Skel
+    100026: Combot:LeftUpperArm_Skel
+    100028: Combot:LeftUpperLeg_Skel
+    100030: Combot:Legs_Geo
+    100032: Combot:MidSection_Skel
+    100034: Combot:RightArm_Geo
+    100036: Combot:RightClav_Skel
+    100038: Combot:RightFoot_Skel
+    100040: Combot:RightHand_Attach
+    100042: Combot:RightHand_Skel
+    100044: Combot:RightLowerArm_Skel
+    100046: Combot:RightLowerLeg_Skel
+    100048: Combot:RightShoulder_Skel
+    100050: Combot:RightUpperArm_Skel
+    100052: Combot:RightUpperLeg_Skel
+    100054: Combot:RootMotion_Skel
+    100056: Combot:Torso_Geo
+    100058: Combot:Torso_Skel
+    100060: //RootNode
+    100062: Combot:Back_Attach
+    400000: Combot:Combot_Geometry
+    400002: Combot:Combot_Skeleton
+    400004: Combot:Head_Geo
+    400006: Combot:Head_Skel
+    400008: Combot:Hips_Skel
+    400010: Combot:LeftArm_Geo
+    400012: Combot:LeftClav_Skel
+    400014: Combot:LeftFoot_Skel
+    400016: Combot:LeftHand_Attach
+    400018: Combot:LeftHand_Skel
+    400020: Combot:LeftLowerArm_Skel
+    400022: Combot:LeftLowerLeg_Skel
+    400024: Combot:LeftShoulder_Skel
+    400026: Combot:LeftUpperArm_Skel
+    400028: Combot:LeftUpperLeg_Skel
+    400030: Combot:Legs_Geo
+    400032: Combot:MidSection_Skel
+    400034: Combot:RightArm_Geo
+    400036: Combot:RightClav_Skel
+    400038: Combot:RightFoot_Skel
+    400040: Combot:RightHand_Attach
+    400042: Combot:RightHand_Skel
+    400044: Combot:RightLowerArm_Skel
+    400046: Combot:RightLowerLeg_Skel
+    400048: Combot:RightShoulder_Skel
+    400050: Combot:RightUpperArm_Skel
+    400052: Combot:RightUpperLeg_Skel
+    400054: Combot:RootMotion_Skel
+    400056: Combot:Torso_Geo
+    400058: Combot:Torso_Skel
+    400060: //RootNode
+    400062: Combot:Back_Attach
+    4300000: Combot:LeftArm_Geo
+    4300002: Combot:RightArm_Geo
+    4300004: Combot:Head_Geo
+    4300006: Combot:Legs_Geo
+    4300008: Combot:Torso_Geo
+    7400000: Attack_Forward
+    7400002: Attack_Right
+    7400004: Attack_Left
+    7400006: EnterReachPose
+    7400008: Attack_Reach_Forward
+    7400010: Attack_Reach_Left
+    7400012: Attack_Reach_Right
+    7400014: ExitReachPose
+    7400016: AttackIdle
+    7400018: Attack_Forward_Blocked
+    7400020: Attack_Right_Blocked
+    7400022: Attack_Left_Blocked
+    7400024: IdleToSpearAttackIdle
+    7400026: SpearAttackIdleToIdle
+    9500000: //RootNode
+    13700000: Combot:Head_Geo
+    13700002: Combot:LeftArm_Geo
+    13700004: Combot:Legs_Geo
+    13700006: Combot:RightArm_Geo
+    13700008: Combot:Torso_Geo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Attack_Forward
+      takeName: Attack_Forward
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.37869823
+        functionName: AttackCompleted
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_Right
+      takeName: Attack_Right
+      firstFrame: 40
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.37869823
+        functionName: AttackCompleted
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 40
+    - serializedVersion: 16
+      name: Attack_Left
+      takeName: Attack_Left
+      firstFrame: 80
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.36982253
+        functionName: AttackCompleted
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 80
+    - serializedVersion: 16
+      name: EnterReachPose
+      takeName: EnterReachPose
+      firstFrame: 120
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack_Reach_Forward
+      takeName: Attack_Reach_Forward
+      firstFrame: 135
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.3057005
+        functionName: ActivateWeapon
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.3994084
+        functionName: AttackCompleted
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 135
+    - serializedVersion: 16
+      name: Attack_Reach_Left
+      takeName: Attack_Reach_Left
+      firstFrame: 185
+      lastFrame: 235
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.36968696
+        functionName: ActivateWeapon
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5029584
+        functionName: AttackCompleted
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 185
+    - serializedVersion: 16
+      name: Attack_Reach_Right
+      takeName: Attack_Reach_Right
+      firstFrame: 235
+      lastFrame: 285
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.21301761
+        functionName: ActivateWeapon
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.3875739
+        functionName: AttackCompleted
+        data: Hit
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 235
+    - serializedVersion: 16
+      name: ExitReachPose
+      takeName: ExitReachPose
+      firstFrame: 285
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 135
+    - serializedVersion: 16
+      name: AttackIdle
+      takeName: AttackIdle
+      firstFrame: 300
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 300
+    - serializedVersion: 16
+      name: Attack_Forward_Blocked
+      takeName: Attack_Forward_Blocked
+      firstFrame: 400
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.5
+        functionName: AttackComplete
+        data: BlockedForward
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Back_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 400
+    - serializedVersion: 16
+      name: Attack_Right_Blocked
+      takeName: Attack_Right_Blocked
+      firstFrame: 430
+      lastFrame: 460
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.4970413
+        functionName: AttackComplete
+        data: BlockedRight
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Back_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 430
+    - serializedVersion: 16
+      name: Attack_Left_Blocked
+      takeName: Attack_Left_Blocked
+      firstFrame: 460
+      lastFrame: 490
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.5
+        functionName: AttackComplete
+        data: BlockedLeft
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 460
+    - serializedVersion: 16
+      name: IdleToSpearAttackIdle
+      takeName: IdleToSpearAttackIdle
+      firstFrame: 500
+      lastFrame: 540
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.3964498
+        functionName: DrawWeapons
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Back_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 500
+    - serializedVersion: 16
+      name: SpearAttackIdleToIdle
+      takeName: SpearAttackIdleToIdle
+      firstFrame: 540
+      lastFrame: 555
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.6183441
+        functionName: StowWeapons
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Combot:Combot_Geometry
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Head_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:LeftArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Legs_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:RightArm_Geo
+        weight: 1
+      - path: Combot:Combot_Geometry/Combot:Torso_Geo
+        weight: 1
+      - path: Combot:Combot_Skeleton
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:LeftUpperLeg_Skel/Combot:LeftLowerLeg_Skel/Combot:LeftFoot_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Back_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:Head_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:LeftClav_Skel/Combot:LeftShoulder_Skel/Combot:LeftUpperArm_Skel/Combot:LeftLowerArm_Skel/Combot:LeftHand_Skel/Combot:LeftHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:MidSection_Skel/Combot:Torso_Skel/Combot:RightClav_Skel/Combot:RightShoulder_Skel/Combot:RightUpperArm_Skel/Combot:RightLowerArm_Skel/Combot:RightHand_Skel/Combot:RightHand_Attach
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel
+        weight: 1
+      - path: Combot:Combot_Skeleton/Combot:RootMotion_Skel/Combot:Hips_Skel/Combot:RightUpperLeg_Skel/Combot:RightLowerLeg_Skel/Combot:RightFoot_Skel
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 540
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Combot:RootMotion_Skel
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e5857a10394c24a23a0cb1c8790525ef,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

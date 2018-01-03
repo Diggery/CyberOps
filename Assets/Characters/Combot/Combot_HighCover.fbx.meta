@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: 13930c9f3423e432fbaf446516b90d29
+timeCreated: 1513879044
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AimingTargets:BackCenter
+    100002: AimingTargets:BackFarLeft
+    100004: AimingTargets:BackFarRight
+    100006: AimingTargets:BackLeft
+    100008: AimingTargets:BackRight
+    100010: AimingTargets:Center
+    100012: AimingTargets:Center 1
+    100014: AimingTargets:Center 2
+    100016: AimingTargets:Center 3
+    100018: AimingTargets:Center 4
+    100020: AimingTargets:Center 5
+    100022: AimingTargets:Center 6
+    100024: AimingTargets:Center 7
+    100026: AimingTargets:Center 8
+    100028: AimingTargets:Center 9
+    100030: AimingTargets:Down
+    100032: AimingTargets:Down 1
+    100034: AimingTargets:Down 2
+    100036: AimingTargets:Down 3
+    100038: AimingTargets:Down 4
+    100040: AimingTargets:Down 5
+    100042: AimingTargets:Down 6
+    100044: AimingTargets:Down 7
+    100046: AimingTargets:Down 8
+    100048: AimingTargets:Down 9
+    100050: AimingTargets:FarLeft
+    100052: AimingTargets:FarRight
+    100054: AimingTargets:Forward
+    100056: AimingTargets:Left
+    100058: AimingTargets:Right
+    100060: AimingTargets:Targets
+    100062: AimingTargets:Up
+    100064: AimingTargets:Up 1
+    100066: AimingTargets:Up 2
+    100068: AimingTargets:Up 3
+    100070: AimingTargets:Up 4
+    100072: AimingTargets:Up 5
+    100074: AimingTargets:Up 6
+    100076: AimingTargets:Up 7
+    100078: AimingTargets:Up 8
+    100080: AimingTargets:Up 9
+    100082: ambientLight1
+    100084: AssaultRifle:AssaultRifle
+    100086: AssaultRifle:Magazine
+    100088: AssaultRifle:Muzzle
+    100090: //RootNode
+    100092: Combot_Rig:Combot_Control
+    100094: Combot_Rig:Combot_Geometry
+    100096: Combot_Rig:Combot_Skeleton
+    100098: Combot_Rig:Feather1_Skel
+    100100: Combot_Rig:Feather2_Skel
+    100102: Combot_Rig:Head_Control
+    100104: Combot_Rig:Head_Geo
+    100106: Combot_Rig:Head_Skel
+    100108: Combot_Rig:Heading_Control
+    100110: Combot_Rig:Hips_Control
+    100112: Combot_Rig:Hips_Skel
+    100114: Combot_Rig:ikHandle1
+    100116: Combot_Rig:ikHandle2
+    100118: Combot_Rig:ikHandle3
+    100120: Combot_Rig:ikHandle4
+    100122: Combot_Rig:LeftArm_Geo
+    100124: Combot_Rig:LeftBack_Attach
+    100126: Combot_Rig:LeftBackAttach_Control
+    100128: Combot_Rig:LeftClav_Skel
+    100130: Combot_Rig:LeftElbow_Control
+    100132: Combot_Rig:LeftFingers_Control
+    100134: Combot_Rig:LeftFingers_Skel
+    100136: Combot_Rig:LeftFoot_Control
+    100138: Combot_Rig:LeftFoot_Skel
+    100140: Combot_Rig:LeftHand_Attach
+    100142: Combot_Rig:LeftHand_Control
+    100144: Combot_Rig:LeftHand_Skel
+    100146: Combot_Rig:LeftHandAttach_Control
+    100148: Combot_Rig:LeftKnee_Control
+    100150: Combot_Rig:LeftLowerArm_Skel
+    100152: Combot_Rig:LeftLowerLeg_Skel
+    100154: Combot_Rig:LeftShoulder_Control
+    100156: Combot_Rig:LeftToes_Control
+    100158: Combot_Rig:LeftToes_Skel
+    100160: Combot_Rig:LeftUpperArm_Skel
+    100162: Combot_Rig:LeftUpperLeg_Skel
+    100164: Combot_Rig:Legs_Geo
+    100166: Combot_Rig:Neck_Skel
+    100168: Combot_Rig:RightArm_Geo
+    100170: Combot_Rig:RightBack_Attach
+    100172: Combot_Rig:RightBackAttach_Control
+    100174: Combot_Rig:RightClav_Skel
+    100176: Combot_Rig:RightElbow_Control
+    100178: Combot_Rig:RightFingers_Control
+    100180: Combot_Rig:RightFingers_Skel
+    100182: Combot_Rig:RightFoot_Control
+    100184: Combot_Rig:RightFoot_Skel
+    100186: Combot_Rig:RightHand_Attach
+    100188: Combot_Rig:RightHand_Control
+    100190: Combot_Rig:RightHand_Skel
+    100192: Combot_Rig:RightHandAttach_Control
+    100194: Combot_Rig:RightKnee_Control
+    100196: Combot_Rig:RightLowerArm_Skel
+    100198: Combot_Rig:RightLowerLeg_Skel
+    100200: Combot_Rig:RightShoulder_Control
+    100202: Combot_Rig:RightToes_Control
+    100204: Combot_Rig:RightToes_Skel
+    100206: Combot_Rig:RightUpperArm_Skel
+    100208: Combot_Rig:RightUpperLeg_Skel
+    100210: Combot_Rig:Root_Control
+    100212: Combot_Rig:RootMotion_Control
+    100214: Combot_Rig:RootMotion_Skel
+    100216: Combot_Rig:Spine_Control
+    100218: Combot_Rig:Spine_Skel
+    100220: Combot_Rig:Torso_Control
+    100222: Combot_Rig:Torso_Geo
+    100224: Combot_Rig:Torso_Skel
+    100226: directionalLight1
+    100228: directionalLight2
+    100230: pCube1
+    100232: pPlane1
+    100234: Combot:Combot_Geometry
+    100236: Combot:Combot_Skeleton
+    100238: Combot:Feather1_Skel
+    100240: Combot:Feather2_Skel
+    100242: Combot:Head_Geo
+    100244: Combot:Head_Skel
+    100246: Combot:Hips_Skel
+    100248: Combot:LeftArm_Geo
+    100250: Combot:LeftBack_Attach
+    100252: Combot:LeftClav_Skel
+    100254: Combot:LeftFingers_Skel
+    100256: Combot:LeftFoot_Skel
+    100258: Combot:LeftHand_Attach
+    100260: Combot:LeftHand_Skel
+    100262: Combot:LeftLowerArm_Skel
+    100264: Combot:LeftLowerLeg_Skel
+    100266: Combot:LeftToes_Skel
+    100268: Combot:LeftUpperArm_Skel
+    100270: Combot:LeftUpperLeg_Skel
+    100272: Combot:Legs_Geo
+    100274: Combot:Neck_Skel
+    100276: Combot:RightArm_Geo
+    100278: Combot:RightBack_Attach
+    100280: Combot:RightClav_Skel
+    100282: Combot:RightFingers_Skel
+    100284: Combot:RightFoot_Skel
+    100286: Combot:RightHand_Attach
+    100288: Combot:RightHand_Skel
+    100290: Combot:RightLowerArm_Skel
+    100292: Combot:RightLowerLeg_Skel
+    100294: Combot:RightToes_Skel
+    100296: Combot:RightUpperArm_Skel
+    100298: Combot:RightUpperLeg_Skel
+    100300: Combot:RootMotion_Skel
+    100302: Combot:Spine_Skel
+    100304: Combot:Torso_Geo
+    100306: Combot:Torso_Skel
+    400000: AimingTargets:BackCenter
+    400002: AimingTargets:BackFarLeft
+    400004: AimingTargets:BackFarRight
+    400006: AimingTargets:BackLeft
+    400008: AimingTargets:BackRight
+    400010: AimingTargets:Center
+    400012: AimingTargets:Center 1
+    400014: AimingTargets:Center 2
+    400016: AimingTargets:Center 3
+    400018: AimingTargets:Center 4
+    400020: AimingTargets:Center 5
+    400022: AimingTargets:Center 6
+    400024: AimingTargets:Center 7
+    400026: AimingTargets:Center 8
+    400028: AimingTargets:Center 9
+    400030: AimingTargets:Down
+    400032: AimingTargets:Down 1
+    400034: AimingTargets:Down 2
+    400036: AimingTargets:Down 3
+    400038: AimingTargets:Down 4
+    400040: AimingTargets:Down 5
+    400042: AimingTargets:Down 6
+    400044: AimingTargets:Down 7
+    400046: AimingTargets:Down 8
+    400048: AimingTargets:Down 9
+    400050: AimingTargets:FarLeft
+    400052: AimingTargets:FarRight
+    400054: AimingTargets:Forward
+    400056: AimingTargets:Left
+    400058: AimingTargets:Right
+    400060: AimingTargets:Targets
+    400062: AimingTargets:Up
+    400064: AimingTargets:Up 1
+    400066: AimingTargets:Up 2
+    400068: AimingTargets:Up 3
+    400070: AimingTargets:Up 4
+    400072: AimingTargets:Up 5
+    400074: AimingTargets:Up 6
+    400076: AimingTargets:Up 7
+    400078: AimingTargets:Up 8
+    400080: AimingTargets:Up 9
+    400082: ambientLight1
+    400084: AssaultRifle:AssaultRifle
+    400086: AssaultRifle:Magazine
+    400088: AssaultRifle:Muzzle
+    400090: //RootNode
+    400092: Combot_Rig:Combot_Control
+    400094: Combot_Rig:Combot_Geometry
+    400096: Combot_Rig:Combot_Skeleton
+    400098: Combot_Rig:Feather1_Skel
+    400100: Combot_Rig:Feather2_Skel
+    400102: Combot_Rig:Head_Control
+    400104: Combot_Rig:Head_Geo
+    400106: Combot_Rig:Head_Skel
+    400108: Combot_Rig:Heading_Control
+    400110: Combot_Rig:Hips_Control
+    400112: Combot_Rig:Hips_Skel
+    400114: Combot_Rig:ikHandle1
+    400116: Combot_Rig:ikHandle2
+    400118: Combot_Rig:ikHandle3
+    400120: Combot_Rig:ikHandle4
+    400122: Combot_Rig:LeftArm_Geo
+    400124: Combot_Rig:LeftBack_Attach
+    400126: Combot_Rig:LeftBackAttach_Control
+    400128: Combot_Rig:LeftClav_Skel
+    400130: Combot_Rig:LeftElbow_Control
+    400132: Combot_Rig:LeftFingers_Control
+    400134: Combot_Rig:LeftFingers_Skel
+    400136: Combot_Rig:LeftFoot_Control
+    400138: Combot_Rig:LeftFoot_Skel
+    400140: Combot_Rig:LeftHand_Attach
+    400142: Combot_Rig:LeftHand_Control
+    400144: Combot_Rig:LeftHand_Skel
+    400146: Combot_Rig:LeftHandAttach_Control
+    400148: Combot_Rig:LeftKnee_Control
+    400150: Combot_Rig:LeftLowerArm_Skel
+    400152: Combot_Rig:LeftLowerLeg_Skel
+    400154: Combot_Rig:LeftShoulder_Control
+    400156: Combot_Rig:LeftToes_Control
+    400158: Combot_Rig:LeftToes_Skel
+    400160: Combot_Rig:LeftUpperArm_Skel
+    400162: Combot_Rig:LeftUpperLeg_Skel
+    400164: Combot_Rig:Legs_Geo
+    400166: Combot_Rig:Neck_Skel
+    400168: Combot_Rig:RightArm_Geo
+    400170: Combot_Rig:RightBack_Attach
+    400172: Combot_Rig:RightBackAttach_Control
+    400174: Combot_Rig:RightClav_Skel
+    400176: Combot_Rig:RightElbow_Control
+    400178: Combot_Rig:RightFingers_Control
+    400180: Combot_Rig:RightFingers_Skel
+    400182: Combot_Rig:RightFoot_Control
+    400184: Combot_Rig:RightFoot_Skel
+    400186: Combot_Rig:RightHand_Attach
+    400188: Combot_Rig:RightHand_Control
+    400190: Combot_Rig:RightHand_Skel
+    400192: Combot_Rig:RightHandAttach_Control
+    400194: Combot_Rig:RightKnee_Control
+    400196: Combot_Rig:RightLowerArm_Skel
+    400198: Combot_Rig:RightLowerLeg_Skel
+    400200: Combot_Rig:RightShoulder_Control
+    400202: Combot_Rig:RightToes_Control
+    400204: Combot_Rig:RightToes_Skel
+    400206: Combot_Rig:RightUpperArm_Skel
+    400208: Combot_Rig:RightUpperLeg_Skel
+    400210: Combot_Rig:Root_Control
+    400212: Combot_Rig:RootMotion_Control
+    400214: Combot_Rig:RootMotion_Skel
+    400216: Combot_Rig:Spine_Control
+    400218: Combot_Rig:Spine_Skel
+    400220: Combot_Rig:Torso_Control
+    400222: Combot_Rig:Torso_Geo
+    400224: Combot_Rig:Torso_Skel
+    400226: directionalLight1
+    400228: directionalLight2
+    400230: pCube1
+    400232: pPlane1
+    400234: Combot:Combot_Geometry
+    400236: Combot:Combot_Skeleton
+    400238: Combot:Feather1_Skel
+    400240: Combot:Feather2_Skel
+    400242: Combot:Head_Geo
+    400244: Combot:Head_Skel
+    400246: Combot:Hips_Skel
+    400248: Combot:LeftArm_Geo
+    400250: Combot:LeftBack_Attach
+    400252: Combot:LeftClav_Skel
+    400254: Combot:LeftFingers_Skel
+    400256: Combot:LeftFoot_Skel
+    400258: Combot:LeftHand_Attach
+    400260: Combot:LeftHand_Skel
+    400262: Combot:LeftLowerArm_Skel
+    400264: Combot:LeftLowerLeg_Skel
+    400266: Combot:LeftToes_Skel
+    400268: Combot:LeftUpperArm_Skel
+    400270: Combot:LeftUpperLeg_Skel
+    400272: Combot:Legs_Geo
+    400274: Combot:Neck_Skel
+    400276: Combot:RightArm_Geo
+    400278: Combot:RightBack_Attach
+    400280: Combot:RightClav_Skel
+    400282: Combot:RightFingers_Skel
+    400284: Combot:RightFoot_Skel
+    400286: Combot:RightHand_Attach
+    400288: Combot:RightHand_Skel
+    400290: Combot:RightLowerArm_Skel
+    400292: Combot:RightLowerLeg_Skel
+    400294: Combot:RightToes_Skel
+    400296: Combot:RightUpperArm_Skel
+    400298: Combot:RightUpperLeg_Skel
+    400300: Combot:RootMotion_Skel
+    400302: Combot:Spine_Skel
+    400304: Combot:Torso_Geo
+    400306: Combot:Torso_Skel
+    2100000: MatGround
+    2100002: lambert1
+    2100004: Combot_Rig_Mat_Legs_Basic
+    2100006: Combot_Rig_Mat_Head_Basic
+    2100008: Combot_Rig_Mat_Arms_Basic
+    2100010: Combot_Rig_Mat_Torso_Basic
+    2100012: AssaultRifle_Mat_AssaultRifle
+    2100014: Combot_Mat_Legs_Basic
+    2100016: Combot_Mat_Head_Basic
+    2100018: Combot_Mat_Arms_Basic
+    2100020: Combot_Mat_Torso_Basic
+    2300000: AssaultRifle:AssaultRifle
+    2300002: AssaultRifle:Magazine
+    2300004: pCube1
+    2300006: pPlane1
+    3300000: AssaultRifle:AssaultRifle
+    3300002: AssaultRifle:Magazine
+    3300004: pCube1
+    3300006: pPlane1
+    4300000: pPlane1
+    4300002: pCube1
+    4300004: Combot_Rig:Legs_Geo
+    4300006: Combot_Rig:Head_Geo
+    4300008: Combot_Rig:LeftArm_Geo
+    4300010: Combot_Rig:RightArm_Geo
+    4300012: Combot_Rig:Torso_Geo
+    4300014: AssaultRifle:AssaultRifle
+    4300016: AssaultRifle:Magazine
+    4300018: Combot:Legs_Geo
+    4300020: Combot:Head_Geo
+    4300022: Combot:LeftArm_Geo
+    4300024: Combot:RightArm_Geo
+    4300026: Combot:Torso_Geo
+    7400000: Enter
+    7400002: IdleRight
+    7400004: IdleTrans
+    7400006: AimLeftTrans
+    7400008: IdleLeft
+    7400010: AimFrontLeft
+    7400012: AimFL_0_Down
+    7400014: AimFL_0_Straight
+    7400016: AimFL_0_Up
+    7400018: AimFL_45_Down
+    7400020: AimFL_45_Straight
+    7400022: AimFL_45_Up
+    7400024: AimFL_90_Down
+    7400026: AimFL_90_Straight
+    7400028: AimFL_90_Up
+    7400030: FrontLeft-BackLeft_Trans
+    7400032: AimBL_90_Down
+    7400034: AimBL_90_Straight
+    7400036: AimBL_90_Up
+    7400038: AimBL_135_Down
+    7400040: AimBL_135_Straight
+    7400042: AimBL_135_Up
+    7400044: AimBL_180_Down
+    7400046: AimBL_180_Straight
+    7400048: AimBL_180_Up
+    7400050: AimFrontRight
+    7400052: AimFR_0_Down
+    7400054: AimFR_0_Straight
+    7400056: AimFR_0_Up
+    7400058: AimFR_45_Down
+    7400060: AimFR_45_Straight
+    7400062: AimFR_45_Up
+    7400064: AimFR_90_Down
+    7400066: AimFR_90_Straight
+    7400068: AimFR_90_Up
+    7400070: FrontRight-BackRight_Trans
+    7400072: AimBR_90_Down
+    7400074: AimBR_90_Straight
+    7400076: AimBR_90_Up
+    7400078: AimBR_135_Down
+    7400080: AimBR_135_Straight
+    7400082: AimBR_135_Up
+    7400084: AimBR_180_Down
+    7400086: AimBR_180_Straight
+    7400088: AimBR_180_Up
+    7400090: BackRight-BackLeft_Trans
+    7400092: AimBackRight
+    7400094: AimBackLeft
+    7400096: FrontLeft-FrontRight_Trans
+    9500000: //RootNode
+    10800000: ambientLight1
+    10800002: directionalLight1
+    10800004: directionalLight2
+    13700000: Combot_Rig:Head_Geo
+    13700002: Combot_Rig:LeftArm_Geo
+    13700004: Combot_Rig:Legs_Geo
+    13700006: Combot_Rig:RightArm_Geo
+    13700008: Combot_Rig:Torso_Geo
+    13700010: Combot:Head_Geo
+    13700012: Combot:LeftArm_Geo
+    13700014: Combot:Legs_Geo
+    13700016: Combot:RightArm_Geo
+    13700018: Combot:Torso_Geo
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

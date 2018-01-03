@@ -1,0 +1,326 @@
+fileFormatVersion: 2
+guid: 0b75b6a15612b4eb882cd763989b01ed
+timeCreated: 1503188810
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Combot:Combot_Geometry
+    100002: Combot:Combot_Skeleton
+    100004: Combot:Head_Geo
+    100006: Combot:Head_Skel
+    100008: Combot:Hips_Skel
+    100010: Combot:LeftArm_Geo
+    100012: Combot:LeftBack_Attach
+    100014: Combot:LeftClav_Skel
+    100016: Combot:LeftFingers_Skel
+    100018: Combot:LeftFoot_Skel
+    100020: Combot:LeftHand_Attach
+    100022: Combot:LeftHand_Skel
+    100024: Combot:LeftLowerArm_Skel
+    100026: Combot:LeftLowerLeg_Skel
+    100028: Combot:LeftToes_Skel
+    100030: Combot:LeftUpperArm_Skel
+    100032: Combot:LeftUpperLeg_Skel
+    100034: Combot:Legs_Geo
+    100036: Combot:Neck_Skel
+    100038: Combot:RightArm_Geo
+    100040: Combot:RightBack_Attach
+    100042: Combot:RightClav_Skel
+    100044: Combot:RightFingers_Skel
+    100046: Combot:RightFoot_Skel
+    100048: Combot:RightHand_Attach
+    100050: Combot:RightHand_Skel
+    100052: Combot:RightLowerArm_Skel
+    100054: Combot:RightLowerLeg_Skel
+    100056: Combot:RightToes_Skel
+    100058: Combot:RightUpperArm_Skel
+    100060: Combot:RightUpperLeg_Skel
+    100062: Combot:RootMotion_Skel
+    100064: Combot:Spine_Skel
+    100066: Combot:Torso_Geo
+    100068: Combot:Torso_Skel
+    100070: //RootNode
+    100072: Combot_Rig:Combot_Geometry
+    100074: Combot_Rig:Combot_Skeleton
+    100076: Combot_Rig:Head_Geo
+    100078: Combot_Rig:Head_Skel
+    100080: Combot_Rig:Hips_Skel
+    100082: Combot_Rig:LeftArm_Geo
+    100084: Combot_Rig:LeftBack_Attach
+    100086: Combot_Rig:LeftClav_Skel
+    100088: Combot_Rig:LeftFingers_Skel
+    100090: Combot_Rig:LeftFoot_Skel
+    100092: Combot_Rig:LeftHand_Attach
+    100094: Combot_Rig:LeftHand_Skel
+    100096: Combot_Rig:LeftLowerArm_Skel
+    100098: Combot_Rig:LeftLowerLeg_Skel
+    100100: Combot_Rig:LeftToes_Skel
+    100102: Combot_Rig:LeftUpperArm_Skel
+    100104: Combot_Rig:LeftUpperLeg_Skel
+    100106: Combot_Rig:Legs_Geo
+    100108: Combot_Rig:Neck_Skel
+    100110: Combot_Rig:RightArm_Geo
+    100112: Combot_Rig:RightBack_Attach
+    100114: Combot_Rig:RightClav_Skel
+    100116: Combot_Rig:RightFingers_Skel
+    100118: Combot_Rig:RightFoot_Skel
+    100120: Combot_Rig:RightHand_Attach
+    100122: Combot_Rig:RightHand_Skel
+    100124: Combot_Rig:RightLowerArm_Skel
+    100126: Combot_Rig:RightLowerLeg_Skel
+    100128: Combot_Rig:RightToes_Skel
+    100130: Combot_Rig:RightUpperArm_Skel
+    100132: Combot_Rig:RightUpperLeg_Skel
+    100134: Combot_Rig:RootMotion_Skel
+    100136: Combot_Rig:Spine_Skel
+    100138: Combot_Rig:Torso_Geo
+    100140: Combot_Rig:Torso_Skel
+    100142: Combot:Feather1_Skel
+    100144: Combot:Feather2_Skel
+    400000: Combot:Combot_Geometry
+    400002: Combot:Combot_Skeleton
+    400004: Combot:Head_Geo
+    400006: Combot:Head_Skel
+    400008: Combot:Hips_Skel
+    400010: Combot:LeftArm_Geo
+    400012: Combot:LeftBack_Attach
+    400014: Combot:LeftClav_Skel
+    400016: Combot:LeftFingers_Skel
+    400018: Combot:LeftFoot_Skel
+    400020: Combot:LeftHand_Attach
+    400022: Combot:LeftHand_Skel
+    400024: Combot:LeftLowerArm_Skel
+    400026: Combot:LeftLowerLeg_Skel
+    400028: Combot:LeftToes_Skel
+    400030: Combot:LeftUpperArm_Skel
+    400032: Combot:LeftUpperLeg_Skel
+    400034: Combot:Legs_Geo
+    400036: Combot:Neck_Skel
+    400038: Combot:RightArm_Geo
+    400040: Combot:RightBack_Attach
+    400042: Combot:RightClav_Skel
+    400044: Combot:RightFingers_Skel
+    400046: Combot:RightFoot_Skel
+    400048: Combot:RightHand_Attach
+    400050: Combot:RightHand_Skel
+    400052: Combot:RightLowerArm_Skel
+    400054: Combot:RightLowerLeg_Skel
+    400056: Combot:RightToes_Skel
+    400058: Combot:RightUpperArm_Skel
+    400060: Combot:RightUpperLeg_Skel
+    400062: Combot:RootMotion_Skel
+    400064: Combot:Spine_Skel
+    400066: Combot:Torso_Geo
+    400068: Combot:Torso_Skel
+    400070: //RootNode
+    400072: Combot_Rig:Combot_Geometry
+    400074: Combot_Rig:Combot_Skeleton
+    400076: Combot_Rig:Head_Geo
+    400078: Combot_Rig:Head_Skel
+    400080: Combot_Rig:Hips_Skel
+    400082: Combot_Rig:LeftArm_Geo
+    400084: Combot_Rig:LeftBack_Attach
+    400086: Combot_Rig:LeftClav_Skel
+    400088: Combot_Rig:LeftFingers_Skel
+    400090: Combot_Rig:LeftFoot_Skel
+    400092: Combot_Rig:LeftHand_Attach
+    400094: Combot_Rig:LeftHand_Skel
+    400096: Combot_Rig:LeftLowerArm_Skel
+    400098: Combot_Rig:LeftLowerLeg_Skel
+    400100: Combot_Rig:LeftToes_Skel
+    400102: Combot_Rig:LeftUpperArm_Skel
+    400104: Combot_Rig:LeftUpperLeg_Skel
+    400106: Combot_Rig:Legs_Geo
+    400108: Combot_Rig:Neck_Skel
+    400110: Combot_Rig:RightArm_Geo
+    400112: Combot_Rig:RightBack_Attach
+    400114: Combot_Rig:RightClav_Skel
+    400116: Combot_Rig:RightFingers_Skel
+    400118: Combot_Rig:RightFoot_Skel
+    400120: Combot_Rig:RightHand_Attach
+    400122: Combot_Rig:RightHand_Skel
+    400124: Combot_Rig:RightLowerArm_Skel
+    400126: Combot_Rig:RightLowerLeg_Skel
+    400128: Combot_Rig:RightToes_Skel
+    400130: Combot_Rig:RightUpperArm_Skel
+    400132: Combot_Rig:RightUpperLeg_Skel
+    400134: Combot_Rig:RootMotion_Skel
+    400136: Combot_Rig:Spine_Skel
+    400138: Combot_Rig:Torso_Geo
+    400140: Combot_Rig:Torso_Skel
+    400142: Combot:Feather1_Skel
+    400144: Combot:Feather2_Skel
+    4300000: Combot:Head_Geo
+    4300002: Combot:Torso_Geo
+    4300004: Combot:Legs_Geo
+    4300006: Combot:RightArm_Geo
+    4300008: Combot:LeftArm_Geo
+    4300010: Combot_Rig:Head_Geo
+    4300012: Combot_Rig:Torso_Geo
+    4300014: Combot_Rig:Legs_Geo
+    4300016: Combot_Rig:RightArm_Geo
+    4300018: Combot_Rig:LeftArm_Geo
+    7400000: Idle
+    7400002: Idle1
+    7400004: Idle2
+    7400006: Idle3
+    7400008: Idle01
+    9500000: //RootNode
+    13700000: Combot:Head_Geo
+    13700002: Combot:LeftArm_Geo
+    13700004: Combot:Legs_Geo
+    13700006: Combot:RightArm_Geo
+    13700008: Combot:Torso_Geo
+    13700010: Combot_Rig:Head_Geo
+    13700012: Combot_Rig:LeftArm_Geo
+    13700014: Combot_Rig:Legs_Geo
+    13700016: Combot_Rig:RightArm_Geo
+    13700018: Combot_Rig:Torso_Geo
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Mat_Arms_Basic
+    second: {fileID: 2100000, guid: 40d085316ac0a45e185252f79a5ef4bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Mat_Head_Basic
+    second: {fileID: 2100000, guid: dfaf9632812f144528eec47656abf051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Mat_Legs_Basic
+    second: {fileID: 2100000, guid: da3b2d92a459a487e9bbbe3c64b8d314, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Mat_Torso_Basic
+    second: {fileID: 2100000, guid: ca5be8d7ba1474453b703547bb54b20c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Arms_Basic
+    second: {fileID: 2100000, guid: 61f9eef9a010c495091085380cd20ce0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Head_Basic
+    second: {fileID: 2100000, guid: 8969adca75b2b4c9ea313731bfd89177, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Legs_Basic
+    second: {fileID: 2100000, guid: 55c86d3090c214edead49a1cf3432e38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Torso_Basic
+    second: {fileID: 2100000, guid: eb733bd5007f0467aaf762e3f42fec4e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle01
+      takeName: Idle01
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: ee9ab0593bb9d49798aa3f19fb2ee333,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

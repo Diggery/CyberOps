@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 30a7a6efd4a03450398be9c56e16a4b9
+timeCreated: 1502677175
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Head_Basic
+    100004: LeftArm_Basic1
+    100006: Legs_Basic
+    100008: RightArm_Basic
+    100010: Torso_Basic
+    100012: LeftArm_Basic
+    100014: Combot_Rig:Combot_Geometry
+    100016: Combot_Rig:Combot_Skeleton
+    100018: Combot_Rig:Feather1_Skel
+    100020: Combot_Rig:Feather2_Skel
+    100022: Combot_Rig:Head_Geo
+    100024: Combot_Rig:Head_Skel
+    100026: Combot_Rig:Hips_Skel
+    100028: Combot_Rig:LeftArm_Geo
+    100030: Combot_Rig:LeftBack_Attach
+    100032: Combot_Rig:LeftClav_Skel
+    100034: Combot_Rig:LeftFingers_Skel
+    100036: Combot_Rig:LeftFoot_Skel
+    100038: Combot_Rig:LeftHand_Attach
+    100040: Combot_Rig:LeftHand_Skel
+    100042: Combot_Rig:LeftLowerArm_Skel
+    100044: Combot_Rig:LeftLowerLeg_Skel
+    100046: Combot_Rig:LeftToes_Skel
+    100048: Combot_Rig:LeftUpperArm_Skel
+    100050: Combot_Rig:LeftUpperLeg_Skel
+    100052: Combot_Rig:Legs_Geo
+    100054: Combot_Rig:Neck_Skel
+    100056: Combot_Rig:RightArm_Geo
+    100058: Combot_Rig:RightBack_Attach
+    100060: Combot_Rig:RightClav_Skel
+    100062: Combot_Rig:RightFingers_Skel
+    100064: Combot_Rig:RightFoot_Skel
+    100066: Combot_Rig:RightHand_Attach
+    100068: Combot_Rig:RightHand_Skel
+    100070: Combot_Rig:RightLowerArm_Skel
+    100072: Combot_Rig:RightLowerLeg_Skel
+    100074: Combot_Rig:RightToes_Skel
+    100076: Combot_Rig:RightUpperArm_Skel
+    100078: Combot_Rig:RightUpperLeg_Skel
+    100080: Combot_Rig:RootMotion_Skel
+    100082: Combot_Rig:Spine_Skel
+    100084: Combot_Rig:Torso_Geo
+    100086: Combot_Rig:Torso_Skel
+    400000: //RootNode
+    400002: Head_Basic
+    400004: LeftArm_Basic1
+    400006: Legs_Basic
+    400008: RightArm_Basic
+    400010: Torso_Basic
+    400012: LeftArm_Basic
+    400014: Combot_Rig:Combot_Geometry
+    400016: Combot_Rig:Combot_Skeleton
+    400018: Combot_Rig:Feather1_Skel
+    400020: Combot_Rig:Feather2_Skel
+    400022: Combot_Rig:Head_Geo
+    400024: Combot_Rig:Head_Skel
+    400026: Combot_Rig:Hips_Skel
+    400028: Combot_Rig:LeftArm_Geo
+    400030: Combot_Rig:LeftBack_Attach
+    400032: Combot_Rig:LeftClav_Skel
+    400034: Combot_Rig:LeftFingers_Skel
+    400036: Combot_Rig:LeftFoot_Skel
+    400038: Combot_Rig:LeftHand_Attach
+    400040: Combot_Rig:LeftHand_Skel
+    400042: Combot_Rig:LeftLowerArm_Skel
+    400044: Combot_Rig:LeftLowerLeg_Skel
+    400046: Combot_Rig:LeftToes_Skel
+    400048: Combot_Rig:LeftUpperArm_Skel
+    400050: Combot_Rig:LeftUpperLeg_Skel
+    400052: Combot_Rig:Legs_Geo
+    400054: Combot_Rig:Neck_Skel
+    400056: Combot_Rig:RightArm_Geo
+    400058: Combot_Rig:RightBack_Attach
+    400060: Combot_Rig:RightClav_Skel
+    400062: Combot_Rig:RightFingers_Skel
+    400064: Combot_Rig:RightFoot_Skel
+    400066: Combot_Rig:RightHand_Attach
+    400068: Combot_Rig:RightHand_Skel
+    400070: Combot_Rig:RightLowerArm_Skel
+    400072: Combot_Rig:RightLowerLeg_Skel
+    400074: Combot_Rig:RightToes_Skel
+    400076: Combot_Rig:RightUpperArm_Skel
+    400078: Combot_Rig:RightUpperLeg_Skel
+    400080: Combot_Rig:RootMotion_Skel
+    400082: Combot_Rig:Spine_Skel
+    400084: Combot_Rig:Torso_Geo
+    400086: Combot_Rig:Torso_Skel
+    2300000: Head_Basic
+    2300002: LeftArm_Basic1
+    2300004: Legs_Basic
+    2300006: RightArm_Basic
+    2300008: Torso_Basic
+    2300010: LeftArm_Basic
+    3300000: Head_Basic
+    3300002: LeftArm_Basic1
+    3300004: Legs_Basic
+    3300006: RightArm_Basic
+    3300008: Torso_Basic
+    3300010: LeftArm_Basic
+    4300000: Head_Basic
+    4300002: Torso_Basic
+    4300004: Legs_Basic
+    4300006: RightArm_Basic
+    4300008: LeftArm_Basic1
+    4300010: LeftArm_Basic
+    4300012: Combot_Rig:Torso_Geo
+    4300014: Combot_Rig:Legs_Geo
+    4300016: Combot_Rig:Head_Geo
+    4300018: Combot_Rig:LeftArm_Geo
+    4300020: Combot_Rig:RightArm_Geo
+    9500000: //RootNode
+    13700000: Combot_Rig:Head_Geo
+    13700002: Combot_Rig:LeftArm_Geo
+    13700004: Combot_Rig:Legs_Geo
+    13700006: Combot_Rig:RightArm_Geo
+    13700008: Combot_Rig:Torso_Geo
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Arms_Basic
+    second: {fileID: 2100000, guid: 326569d5ce3a044a7ba4d120cb7b78fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Head_Basic
+    second: {fileID: 2100000, guid: cb4e1665d24bd4963bff90e64efdf509, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Legs_Basic
+    second: {fileID: 2100000, guid: 26581b5e19fd8489680cf3f3dbaa8ec8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combot_Rig_Mat_Torso_Basic
+    second: {fileID: 2100000, guid: 5adc97bc4fb1d41c2b4445e8c1ad470f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

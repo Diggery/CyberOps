@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: a23b2b27f869d41818c8dfbebaefc0a2
+timeCreated: 1503186057
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: LeftArm_Basic
+    100004: LeftClav_Skel
+    100006: LeftFingers_Skel
+    100008: LeftHand_Attach
+    100010: LeftHand_Skel
+    100012: LeftLowerArm_Skel
+    100014: LeftUpperArm_Skel
+    100016: RightArm_Basic
+    100018: RightClav_Skel
+    100020: RightFingers_Skel
+    100022: RightHand_Attach
+    100024: RightHand_Skel
+    100026: RightLowerArm_Skel
+    100028: RightUpperArm_Skel
+    100030: LeftArm_Geo
+    100032: RightArm_Geo
+    100034: Combot_Skeleton
+    100036: Hips_Skel
+    100038: RootMotion_Skel
+    100040: Spine_Skel
+    100042: Torso_Skel
+    400000: //RootNode
+    400002: LeftArm_Basic
+    400004: LeftClav_Skel
+    400006: LeftFingers_Skel
+    400008: LeftHand_Attach
+    400010: LeftHand_Skel
+    400012: LeftLowerArm_Skel
+    400014: LeftUpperArm_Skel
+    400016: RightArm_Basic
+    400018: RightClav_Skel
+    400020: RightFingers_Skel
+    400022: RightHand_Attach
+    400024: RightHand_Skel
+    400026: RightLowerArm_Skel
+    400028: RightUpperArm_Skel
+    400030: LeftArm_Geo
+    400032: RightArm_Geo
+    400034: Combot_Skeleton
+    400036: Hips_Skel
+    400038: RootMotion_Skel
+    400040: Spine_Skel
+    400042: Torso_Skel
+    4300000: RightArm_Basic
+    4300002: LeftArm_Basic
+    4300004: RightArm_Geo
+    4300006: LeftArm_Geo
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: LeftArm_Basic
+    13700002: RightArm_Basic
+    13700004: LeftArm_Geo
+    13700006: RightArm_Geo
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Arms_Basic
+    second: {fileID: 2100000, guid: 005c9abe7c10c4d278f4d0238da878d9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
