@@ -2066,8 +2066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0411b969606c4b70b5e22e5dbbf651f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TempPrimaryWeapon: AssaultRifle
-  TempSecondaryWeapon: 
   teamName: Team1
   startAsPlayer: 1
 --- !u!114 &1029953308
@@ -6459,8 +6457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0411b969606c4b70b5e22e5dbbf651f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TempPrimaryWeapon: AssaultRifle
-  TempSecondaryWeapon: 
   teamName: TeamBadGuy
   startAsPlayer: 0
 --- !u!114 &1683068233

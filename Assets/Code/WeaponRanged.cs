@@ -47,13 +47,28 @@ public class WeaponRanged : Weapon {
         }
     }
 
+    public override bool InUse {
+        get { return inUse; }
+        set { 
+            inUse = value;
+            if (weaponUI) weaponUI.IsOpen = inUse;
+        }
+    }
+
     Transform magazine;
+
+    int magazines = 0;
+    public int Magazines {
+        get { return magazines; }
+    }
 
     int magazineSize = 30;
     int rounds = 0;
-    float reloadTime = 2.0f;
+    float reloadTime = 3.0f; //this is a failsafe
     float reloadTimer = 0.0f;
 
+    public bool needsUI = true;
+    WeaponUI weaponUI;
 
     public override void Init (UnitControl _owner) {
         base.Init(_owner);
@@ -65,10 +80,18 @@ public class WeaponRanged : Weapon {
         magazine = transform.Find("Magazine");
         rounds = magazineSize;
 
-        if (hasScope && _owner.IsPlayer) {
-            GameObject scopeCamObj = Instantiate(gameManager.GetPrefab("ScopeCam"), muzzle);
-            scope = scopeCamObj.AddComponent<ScopeControl>();
-            scopeCamObj.transform.localRotation = Quaternion.identity;
+        if (_owner.IsPlayer) {
+            if (hasScope) {
+                GameObject scopeCamObj = Instantiate(gameManager.GetPrefab("ScopeCam"), muzzle);
+                scope = scopeCamObj.AddComponent<ScopeControl>();
+                scopeCamObj.transform.localRotation = Quaternion.identity;               
+            }
+
+            if (needsUI) {
+                GameObject weaponUIObj = Instantiate(gameManager.GetPrefab("WeaponUI"));
+                weaponUI = weaponUIObj.GetComponent<WeaponUI>();
+                weaponUI.Init(this);
+            }
         }
     }
 
@@ -80,6 +103,11 @@ public class WeaponRanged : Weapon {
                 Reload();
             }
         }
+    }
+
+    public void AddMagazines(int amount) {
+        magazines = amount;
+        if (weaponUI) weaponUI.Magazines = magazines;
     }
 
     public override void Stowed() {
@@ -113,6 +141,7 @@ public class WeaponRanged : Weapon {
         projectile.GetComponent<Projectile>().Init(owner, aimingDirection, range, damageInfo);
 
         rounds--;
+        if (weaponUI) weaponUI.Rounds = rounds;
 
         if (rounds <= 0)
             EjectMagazine();
@@ -120,6 +149,7 @@ public class WeaponRanged : Weapon {
     }
 
     public void EjectMagazine() {
+
         GameObject oldMag = Instantiate(magazine.gameObject, 
                                         magazine.position, 
                                         magazine.rotation);
@@ -127,8 +157,16 @@ public class WeaponRanged : Weapon {
         Rigidbody oldMagRB = oldMag.GetComponent<Rigidbody>();
         oldMagRB.isKinematic = false;
         oldMagRB.AddRelativeForce(-Vector3.up, ForceMode.Impulse);
+        oldMagRB.AddRelativeTorque(Vector3.forward, ForceMode.Impulse);
 
         magazine.GetComponent<Renderer>().enabled = false;
+
+        if (magazines == 0) {
+            return;
+        }
+        magazines--;
+        if (weaponUI) weaponUI.UseMagazine();
+
         owner.TriggerReload();
         reloadTimer = reloadTime;
         Debug.Log("Ejecting Magazine");
@@ -137,6 +175,8 @@ public class WeaponRanged : Weapon {
     public override void Reload() {
         reloadTimer = -1f;
         rounds = magazineSize;
+        if (weaponUI) weaponUI.Rounds = rounds;
+
         magazine.GetComponent<Renderer>().enabled = true;
 
         Debug.Log("Reloaded");

@@ -19,6 +19,8 @@ public class UnitAttack : MonoBehaviour {
         set { 
             isAiming = value; 
             attackCoolDown = 0.2f;
+            if (currentWeapon)
+                currentWeapon.InUse = isAiming;
         }
     }
 

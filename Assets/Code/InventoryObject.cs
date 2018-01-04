@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class InventoryObject : ScriptableObject {
 
@@ -17,8 +18,18 @@ public class InventoryObject : ScriptableObject {
         public Vector3 offset;
     }   
 
+    [System.Serializable]
+    public class PlayerEntry {  
+        public string name;
+        public string primaryWeapon;
+        public int primaryMagazines;
+        public string secondaryWeapon;
+        public int secondaryMagazines;
+    }  
+
     public PrefabEntry[] prefabs;
     public EquipmentEntry[] equipment;
+    public List<PlayerEntry> players;
 
     public GameObject GetPrefab(string name) {
         GameObject prefab = null;
@@ -45,4 +56,30 @@ public class InventoryObject : ScriptableObject {
 		}
 		return equipmentObj;
 	}
+
+    public PlayerEntry GetPlayerEntry(string name) {
+        PlayerEntry foundPlayer = null;
+        foreach (PlayerEntry entry in players) {
+            if (entry.name.Equals(name)) {
+                foundPlayer = entry;
+                break;
+            }
+        }
+        return foundPlayer;       
+    }
+
+    public void AddPlayerEntry(PlayerEntry newEntry) {
+
+        foreach (PlayerEntry entry in players) {
+            if (entry.name.Equals(name)) {
+                entry.primaryWeapon = newEntry.primaryWeapon;
+                entry.primaryMagazines = newEntry.primaryMagazines;
+                entry.secondaryWeapon = newEntry.secondaryWeapon;
+                entry.secondaryMagazines = newEntry.secondaryMagazines;
+                return;
+            }
+        }
+
+        players.Add(newEntry);
+    }
 }

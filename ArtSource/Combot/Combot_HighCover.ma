@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Combot_HighCover.ma
-//Last modified: Wed, Jan 03, 2018 04:02:45 PM
+//Last modified: Wed, Jan 03, 2018 09:52:26 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Combot" -rfn "Combot_RigRN" -op "v=0;" -typ "mayaAscii" "/Users/briancollins/Unity/CyberOps/ArtSource/Combot/Combot_Rig.ma";
 file -rdi 1 -ns "AssaultRifle" -rfn "AssaultRifleRN" -op "v=0;" -typ "mayaAscii"
@@ -3204,7 +3204,7 @@ createNode nurbsSurface -n "AimingTargets:DownShape" -p "|AimingTargets:Targets|
 	setAttr ".nufa" 4.5;
 	setAttr ".nvfa" 4.5;
 createNode fosterParent -n "Combot_RigRNfosterParent1";
-	rename -uid "9D32F8EC-AD4F-191D-BC5F-A0BDA7EDD5D5";
+	rename -uid "A3A36704-3C40-EEC8-7707-85A5DBE1EEC0";
 createNode parentConstraint -n "LeftHand_Control_parentConstraint1" -p "Combot_RigRNfosterParent1";
 	rename -uid "31306349-0349-28D9-4BF8-D6A1DFEEA6D9";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "AssaultRifleW0" -dv 1 -min 0 -at "double";
@@ -3227,7 +3227,7 @@ createNode parentConstraint -n "LeftHand_Control_parentConstraint1" -p "Combot_R
 	setAttr ".rsrr" -type "double3" -34.342092844882814 -22.281107802132748 -32.940839755199228 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "AssaultRifleRNfosterParent1";
-	rename -uid "BA376B2E-504D-4EDF-6A71-E289F2ECE736";
+	rename -uid "DF9011C3-E641-4A5A-FCE2-579573340BC9";
 createNode parentConstraint -n "AssaultRifle_parentConstraint1" -p "AssaultRifleRNfosterParent1";
 	rename -uid "57D86ACE-7644-F9CD-F9BD-F2BDA2A8E9C2";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "RightHand_AttachW0" -dv 1 -min 0 
@@ -4853,7 +4853,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "34D55E76-DF49-A1ED-74CD-3E8DDFB06EEA";
-	setAttr ".b" -type "string" "playbackOptions -min 330 -max 378 -ast 0 -aet 450 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 378 -ast 0 -aet 450 ";
 	setAttr ".st" 6;
 createNode polyPlane -n "polyPlane1";
 	rename -uid "947D37B1-4D40-79AE-F945-A198C8CBAB8B";

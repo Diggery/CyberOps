@@ -40,6 +40,12 @@ public class Weapon : MonoBehaviour {
         }
     }
 
+    protected bool inUse = false;
+    public virtual bool InUse {
+        get { return inUse; }
+        set { inUse = value; }
+    }
+
     protected float damage = 1.0f;
     float coolDown = 0.15f;
     protected float coolDownTimer = 0.0f;

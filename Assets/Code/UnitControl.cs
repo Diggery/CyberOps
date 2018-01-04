@@ -20,14 +20,13 @@ public class UnitControl : MonoBehaviour {
     public Transform AttachRightBack { get; set; }
     public Transform AttachLeftBack { get; set; }
 
-    public string TempPrimaryWeapon = "AssaultRifle";
-    public string TempSecondaryWeapon = "";
-
+    string unitName;
     public string teamName = "Team1";
     public string TeamName {
         get { return teamName; }
         set {
             teamName = value;
+            unitName = gameObject.name;
             gameObject.name += "_" + teamName;
         }
     }
@@ -71,10 +70,6 @@ public class UnitControl : MonoBehaviour {
 
         TeamName = teamName;
 
-        if (!TempSecondaryWeapon.Equals(""))
-            AddWeapon(TempSecondaryWeapon);
-
-
         hitPoint = maxHits;
 
         RagdollConfig ragdollConfig = gameObject.AddComponent<RagdollConfigCombot>();
@@ -84,7 +79,20 @@ public class UnitControl : MonoBehaviour {
         if (startAsPlayer)
             gameManager.ActiveUnit = this;
 
-        AddWeapon(TempPrimaryWeapon);
+        InventoryObject.PlayerEntry playerData = 
+            gameManager.inventory.GetPlayerEntry(unitName);
+        if (playerData == null) {
+            Debug.Log("No PlayerData Found, Adding It");
+            playerData = new InventoryObject.PlayerEntry();
+            playerData.name = unitName;
+            playerData.primaryWeapon = "AssaultRifle";
+            playerData.primaryMagazines = 2;
+
+            gameManager.inventory.AddPlayerEntry(playerData);
+        }
+
+        AddWeapon(playerData.primaryWeapon, playerData.primaryMagazines);
+        AddWeapon(playerData.secondaryWeapon, playerData.secondaryMagazines);
     }
 
     void Update() {
@@ -95,8 +103,14 @@ public class UnitControl : MonoBehaviour {
         animator.SetFloat("Random", Random.value);
     }
 
-
     public bool AddWeapon(string weaponName) {
+        return AddWeapon(weaponName, 0);
+    }
+
+    public bool AddWeapon(string weaponName, int mags) {
+
+        if (string.IsNullOrEmpty(weaponName))
+            return false;
 
         if (!AttachRightBack) {
             Debug.Log("Missing an attachPoint");
@@ -105,6 +119,9 @@ public class UnitControl : MonoBehaviour {
 
         Debug.Log("Getting " + weaponName + " for " + gameObject.name);
         GameObject weaponObj = gameManager.GetEquipment(weaponName);
+        if (!weaponObj)
+            return false;
+
         Weapon weapon = weaponObj.GetComponent<Weapon>();
 
         weaponObj.transform.SetParent(AttachRightBack, false);
@@ -113,6 +130,11 @@ public class UnitControl : MonoBehaviour {
             weapon.Init(this);
             unitAttack.AddWeapon(weapon, !weapon.isSecondary);
             unitAttack.DrawWeapon(weapon);
+
+            WeaponRanged weaponRanged = weaponObj.GetComponent<WeaponRanged>();
+            if (weaponRanged) {
+                weaponRanged.AddMagazines(mags);
+            }
 
             if (weapon.animOverride) {
                 animator.runtimeAnimatorController = weapon.animOverride;

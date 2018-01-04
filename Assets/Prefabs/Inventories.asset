@@ -20,8 +20,8 @@ MonoBehaviour:
     prefab: {fileID: 1000013624454752, guid: 860007de22d2445518db44c3b3455fb3, type: 2}
   - name: MuzzleFlash
     prefab: {fileID: 1321868334860546, guid: ec44cec57fbb543428f640fa495a0d07, type: 2}
-  - name: SlashWeaponHit
-    prefab: {fileID: 1967721203166878, guid: 19beba0e50ee04ace820373915d3a0a5, type: 2}
+  - name: WeaponUI
+    prefab: {fileID: 1532169219600660, guid: c1e19d3c292d64379a416e4d35f853b2, type: 2}
   - name: WeaponsBlock
     prefab: {fileID: 1983764260030408, guid: 749b8999914814647819dac3e0b9ce69, type: 2}
   - name: Projectile
@@ -34,3 +34,14 @@ MonoBehaviour:
   - name: AssaultRifle
     prefab: {fileID: 1075455355953670, guid: 1bc9df20e6d2b432aa694bbd8162cf1b, type: 2}
     offset: {x: 0, y: 0, z: 0}
+  players:
+  - name: SirDekkatron
+    primaryWeapon: AssaultRifle
+    primaryMagazines: 3
+    secondaryWeapon: 
+    secondaryMagazines: 0
+  - name: BadGuy
+    primaryWeapon: AssaultRifle
+    primaryMagazines: 2
+    secondaryWeapon: 
+    secondaryMagazines: 0
