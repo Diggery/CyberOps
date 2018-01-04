@@ -46,6 +46,7 @@ public class FiringUI : MonoBehaviour {
                 
             } else {
                 openTimer = Mathf.Clamp01(openTimer);
+                HideLines();
             }
         }
     }
@@ -101,7 +102,6 @@ public class FiringUI : MonoBehaviour {
 
             float amount = isOpen ?
                 openCurve.Evaluate(openTimer) : closeCurve.Evaluate(openTimer);
-
 
             float nearScale = Mathf.Lerp(2.0f, 1.5f, amount);
             nearCircle.localScale = Vector3.one * nearScale;

@@ -147,7 +147,7 @@ public class UnitControl : MonoBehaviour {
 
         //animator.SetTrigger("GetHit" + damageInfo.GetOrthagonalDirectionName(transform));
         hitPoint -= damageInfo.damageAmount;
-        Debug.Log("Hit Points now " + damageInfo.damageAmount);
+        Debug.Log("Hit Points now " + hitPoint);
 
         if (!isDead && hitPoint < 0) {
             ragdollControl.SwitchToRagdoll(
@@ -157,6 +157,10 @@ public class UnitControl : MonoBehaviour {
 
             Die();
         }
+    }
+
+    public void TriggerReload() {
+        animator.SetTrigger("Reload");
     }
 
 

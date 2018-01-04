@@ -107,8 +107,11 @@ public class InputControl : MonoBehaviour {
 	}
 
     void HandleClick() {
+        if (GvrControllerInput.ClickButtonDown) {
+            playerAttack.Attack(true);
+        }
         if (GvrControllerInput.ClickButton) {
-            playerAttack.Attack();
+            playerAttack.Attack(false);
         }
     }
 

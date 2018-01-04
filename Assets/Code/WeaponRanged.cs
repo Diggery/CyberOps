@@ -6,9 +6,6 @@ public class WeaponRanged : Weapon {
 
     GameObject projectilePrefab;
 
-    public enum FiringMode { Single, Burst, Auto };
-    public FiringMode mode = FiringMode.Single;
-
     ScopeControl scope;
     public ScopeControl Scope {
         get { return scope; }
@@ -50,9 +47,11 @@ public class WeaponRanged : Weapon {
         }
     }
 
-    int magazineSize = 10;
+    Transform magazine;
+
+    int magazineSize = 30;
     int rounds = 0;
-    float reloadTime = 1.0f;
+    float reloadTime = 2.0f;
     float reloadTimer = 0.0f;
 
 
@@ -63,7 +62,7 @@ public class WeaponRanged : Weapon {
         muzzle = transform.Find("Muzzle");
         GameObject muzzleFlashObj = Instantiate(gameManager.GetPrefab("MuzzleFlash"), muzzle);
         muzzleFlash = muzzleFlashObj.GetComponent<MuzzleFlash>();
-
+        magazine = transform.Find("Magazine");
         rounds = magazineSize;
 
         if (hasScope && _owner.IsPlayer) {
@@ -121,12 +120,25 @@ public class WeaponRanged : Weapon {
     }
 
     public void EjectMagazine() {
+        GameObject oldMag = Instantiate(magazine.gameObject, 
+                                        magazine.position, 
+                                        magazine.rotation);
+        oldMag.GetComponent<BoxCollider>().enabled = true;
+        Rigidbody oldMagRB = oldMag.GetComponent<Rigidbody>();
+        oldMagRB.isKinematic = false;
+        oldMagRB.AddRelativeForce(-Vector3.up, ForceMode.Impulse);
+
+        magazine.GetComponent<Renderer>().enabled = false;
+        owner.TriggerReload();
         reloadTimer = reloadTime;
         Debug.Log("Ejecting Magazine");
     }
-    public void Reload() {
-        rounds = magazineSize;
-        Debug.Log("Reloaded");
 
+    public override void Reload() {
+        reloadTimer = -1f;
+        rounds = magazineSize;
+        magazine.GetComponent<Renderer>().enabled = true;
+
+        Debug.Log("Reloaded");
     }
 }

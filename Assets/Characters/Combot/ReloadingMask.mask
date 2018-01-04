@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ReloadingMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Geometry
+    m_Weight: 0
+  - m_Path: Combot_Rig:Combot_Geometry/Combot_Rig:Head_Geo
+    m_Weight: 0
+  - m_Path: Combot_Rig:Combot_Geometry/Combot_Rig:LeftArm_Geo
+    m_Weight: 0
+  - m_Path: Combot_Rig:Combot_Geometry/Combot_Rig:Legs_Geo
+    m_Weight: 0
+  - m_Path: Combot_Rig:Combot_Geometry/Combot_Rig:RightArm_Geo
+    m_Weight: 0
+  - m_Path: Combot_Rig:Combot_Geometry/Combot_Rig:Torso_Geo
+    m_Weight: 0
+  - m_Path: Combot_Rig:Combot_Skeleton
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:LeftUpperLeg_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:LeftUpperLeg_Skel/Combot_Rig:LeftLowerLeg_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:LeftUpperLeg_Skel/Combot_Rig:LeftLowerLeg_Skel/Combot_Rig:LeftFoot_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:LeftUpperLeg_Skel/Combot_Rig:LeftLowerLeg_Skel/Combot_Rig:LeftFoot_Skel/Combot_Rig:LeftToes_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:RightUpperLeg_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:RightUpperLeg_Skel/Combot_Rig:RightLowerLeg_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:RightUpperLeg_Skel/Combot_Rig:RightLowerLeg_Skel/Combot_Rig:RightFoot_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:RightUpperLeg_Skel/Combot_Rig:RightLowerLeg_Skel/Combot_Rig:RightFoot_Skel/Combot_Rig:RightToes_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftBack_Attach
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftClav_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftClav_Skel/Combot_Rig:LeftUpperArm_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftClav_Skel/Combot_Rig:LeftUpperArm_Skel/Combot_Rig:LeftLowerArm_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftClav_Skel/Combot_Rig:LeftUpperArm_Skel/Combot_Rig:LeftLowerArm_Skel/Combot_Rig:LeftHand_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftClav_Skel/Combot_Rig:LeftUpperArm_Skel/Combot_Rig:LeftLowerArm_Skel/Combot_Rig:LeftHand_Skel/Combot_Rig:LeftFingers_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:LeftClav_Skel/Combot_Rig:LeftUpperArm_Skel/Combot_Rig:LeftLowerArm_Skel/Combot_Rig:LeftHand_Skel/Combot_Rig:LeftHand_Attach
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:Neck_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:Neck_Skel/Combot_Rig:Head_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:Neck_Skel/Combot_Rig:Head_Skel/Combot_Rig:Feather1_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:Neck_Skel/Combot_Rig:Head_Skel/Combot_Rig:Feather2_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightBack_Attach
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightClav_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightClav_Skel/Combot_Rig:RightUpperArm_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightClav_Skel/Combot_Rig:RightUpperArm_Skel/Combot_Rig:RightLowerArm_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightClav_Skel/Combot_Rig:RightUpperArm_Skel/Combot_Rig:RightLowerArm_Skel/Combot_Rig:RightHand_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightClav_Skel/Combot_Rig:RightUpperArm_Skel/Combot_Rig:RightLowerArm_Skel/Combot_Rig:RightHand_Skel/Combot_Rig:RightFingers_Skel
+    m_Weight: 1
+  - m_Path: Combot_Rig:Combot_Skeleton/Combot_Rig:RootMotion_Skel/Combot_Rig:Hips_Skel/Combot_Rig:Spine_Skel/Combot_Rig:Torso_Skel/Combot_Rig:RightClav_Skel/Combot_Rig:RightUpperArm_Skel/Combot_Rig:RightLowerArm_Skel/Combot_Rig:RightHand_Skel/Combot_Rig:RightHand_Attach
+    m_Weight: 1

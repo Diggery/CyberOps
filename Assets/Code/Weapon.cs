@@ -4,6 +4,7 @@ using System.Collections;
 public class Weapon : MonoBehaviour {
 
     public float range = 2.0f;
+    public float attacksPerSecond = 1.0f;
     public bool isSecondary = false;
     public bool hasScope = false;
 
@@ -12,6 +13,9 @@ public class Weapon : MonoBehaviour {
     public WeaponType Type {
         get { return type; }
     }
+
+    public enum FiringMode { Single, Auto };
+    public FiringMode mode = FiringMode.Single;
 
     public RuntimeAnimatorController animOverride;
 
@@ -37,7 +41,7 @@ public class Weapon : MonoBehaviour {
     }
 
     protected float damage = 1.0f;
-    float coolDown = 0.25f;
+    float coolDown = 0.15f;
     protected float coolDownTimer = 0.0f;
 
     float activateDelay = 1.0f;
@@ -64,6 +68,7 @@ public class Weapon : MonoBehaviour {
         
         gameManager = GameManager.instance;
         inputControl = gameManager.InputControl;
+        coolDown = 1 / attacksPerSecond;
         Debug.Log(owner.name + " recieved an " + gameObject.name);
 	}
 	
@@ -97,6 +102,9 @@ public class Weapon : MonoBehaviour {
 
     public virtual void Attack() {
         coolDownTimer = coolDown;
+    }
+
+    public virtual void Reload() {
     }
 
     public virtual void Drop() {

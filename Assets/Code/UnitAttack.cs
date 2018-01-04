@@ -135,9 +135,15 @@ public class UnitAttack : MonoBehaviour {
         animator.SetFloat ("Vertical", aimGoal.y + aimOffset);
     }
 
-    public void Attack() {
+    public void Attack(bool isFirstPress) {
         if (!CanAttack || !primaryWeapon || !primaryWeapon.IsReady || !IsAiming)
             return;
+
+        if (!isFirstPress && primaryWeapon.mode == Weapon.FiringMode.Single) {
+            Debug.Log("Not and Auto Weapon");
+            return;
+        }
+
         primaryWeapon.Attack();
         aimOffset = 0.15f;
 
@@ -191,5 +197,9 @@ public class UnitAttack : MonoBehaviour {
 
         if (secondaryWeapon)
             secondaryWeapon.Drop();       
+    }
+
+    public void Reloaded() {
+        currentWeapon.Reload();
     }
 }

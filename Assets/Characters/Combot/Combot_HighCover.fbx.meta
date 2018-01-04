@@ -395,6 +395,7 @@ ModelImporter:
     7400092: AimBackRight
     7400094: AimBackLeft
     7400096: FrontLeft-FrontRight_Trans
+    7400098: Reload
     9500000: //RootNode
     10800000: ambientLight1
     10800002: directionalLight1
