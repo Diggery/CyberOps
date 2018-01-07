@@ -3,8 +3,6 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour {
 
-    GameManager gameManager;
-
     public AnimationCurve cameraMove;
 
     public Vector3 cameraOffset = Vector3.zero;
@@ -31,7 +29,6 @@ public class CameraControl : MonoBehaviour {
     }
 
 	void Awake () {
-        gameManager = GameManager.instance;
         reticle = transform.Find("GvrControllerPointer/Laser/Reticle");
         cameraTransform = Camera.main.transform;
 	}
@@ -87,7 +84,6 @@ public class CameraControl : MonoBehaviour {
         moveDuration = moveDistance / moveSpeed;
     }
     void MoveComplete() {
-        Debug.Log("Camera Move Complete");
         moveTimer = -1;
     }
 

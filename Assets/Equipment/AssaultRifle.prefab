@@ -277,3 +277,5 @@ MonoBehaviour:
   hasScope: 1
   mode: 1
   animOverride: {fileID: 0}
+  hasWeaponFlash: 1
+  needsUI: 1

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MovingUI : MonoBehaviour {
 
+    public Color uiColor;
+
     MapControl mapControl;
 
     Renderer circleRenderer;
 
     Transform line;
     Renderer lineRenderer;
+    Transform tile;
 
     Transform player;
-
 
 
     public bool isVisible = false;
@@ -34,6 +36,7 @@ public class MovingUI : MonoBehaviour {
         circleRenderer = GetComponent<Renderer>();
 
         line = transform.Find("Line");
+        tile = transform.Find("Tile");
         lineRenderer = line.GetComponent<Renderer>();
         mapControl = GameManager.instance.ActiveMap;
 
@@ -41,21 +44,32 @@ public class MovingUI : MonoBehaviour {
 	
 	void Update () {
         if (isVisible) {
+
             transform.position = 
                 Vector3.Lerp(transform.position, posGoal, Time.deltaTime * 15);
             transform.rotation = 
                 Quaternion.LookRotation(player.position - transform.position);
+
+            tile.position = posGoal + new Vector3(0, -0.025f, 0);
+            tile.rotation = Quaternion.identity;
         }
 	}
 
     public void SetPos(Vector3 pos) {
         if (!isVisible) {
             transform.position = pos;
-            transform.rotation = Quaternion.LookRotation(player.position - transform.position);
+            transform.rotation = 
+                Quaternion.LookRotation(player.position - transform.position);
         }
 
         IsVisible = true;
-        posGoal = mapControl.GetData(pos).position;
-        line.localScale = new Vector3(1.0f, 1.0f, Vector3.Distance(player.position, transform.position));
+        posGoal = mapControl.GetData(pos).position + new Vector3(0, 0.05f, 0);
+        line.localScale = new Vector3(1.0f, 1.0f, 
+            Vector3.Distance(player.position, transform.position)
+        );
+
+        circleRenderer.material.color = uiColor;
+        lineRenderer.material.color = uiColor;
+
     }
 }

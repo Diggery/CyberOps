@@ -84,7 +84,11 @@ public class UnitMover : MonoBehaviour {
 
 
     public void MoveTo(Vector3 newPos) {
-
+        if ((newPos - transform.position).sqrMagnitude < 1.0f) {
+            Debug.Log("Destination is too close");
+            return;
+        }
+            
         MapCellData mapData = mapControl.GetData(newPos);
         if (mapData.IsCollision) {
             Debug.Log("Can't move into collision");
@@ -96,9 +100,10 @@ public class UnitMover : MonoBehaviour {
         animator.SetBool("LowCover", false);
 
         animator.SetTrigger("StartMoving");
-        movingToCover = mapData.HasCover();
+        movingToCover = mapData.HasCover;
         navAgent.SetDestination(mapData.position);
-        Debug.Log(movingToCover ? "Moving to Cover" : "No cover here");
+        mapControl.GetData(transform.position).CurrentStatus =
+                      MapCellData.CellStatus.Open;
     }
 
     public void TransitionToCover(Vector3 mapPos) {
@@ -111,7 +116,8 @@ public class UnitMover : MonoBehaviour {
         transitionRot[1] = mapData.rotation;
         IsTransitioning = true;
 
-        string coverType =  mapData.HasHighCover() ? "HighCover" : "LowCover";
+        string coverType =  mapData.HasHighCover ? "HighCover" : "LowCover";
+        mapData.CurrentStatus = MapCellData.CellStatus.Occupied;
         animator.SetBool(coverType, true);
     }
 

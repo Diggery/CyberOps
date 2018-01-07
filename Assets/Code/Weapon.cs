@@ -21,7 +21,9 @@ public class Weapon : MonoBehaviour {
 
     protected UnitControl owner;
     protected GameManager gameManager;
-    protected InputControl inputControl;
+
+    public bool hasWeaponFlash = false;
+    protected Light weaponFlash;
 
     bool isEquipped = false;
     public bool IsEquipped {
@@ -73,10 +75,20 @@ public class Weapon : MonoBehaviour {
             hasScope = false;
         
         gameManager = GameManager.instance;
-        inputControl = gameManager.InputControl;
         coolDown = 1 / attacksPerSecond;
         Debug.Log(owner.name + " recieved an " + gameObject.name);
+        if (hasWeaponFlash) Invoke("AddWeaponFlash", 0.1f);
 	}
+
+    public virtual void AddWeaponFlash() {
+        weaponFlash = new GameObject("WeaponFlash").AddComponent<Light>();
+        weaponFlash.type = LightType.Point;
+        weaponFlash.color = new Color(1.0f, 0.8f, 0.0f, 1.0f);
+        weaponFlash.range = 3.0f;
+        weaponFlash.transform.SetParent(transform);
+        weaponFlash.transform.localPosition = new Vector3(0, 0, 0.25f);
+    }
+
 	
 	protected virtual void Update () {
         if (coolDownTimer > 0)
@@ -86,6 +98,14 @@ public class Weapon : MonoBehaviour {
             activateTimer -= Time.deltaTime;
             if (activateTimer < 0)
                 Activate();
+        }
+
+        if (hasWeaponFlash && weaponFlash && weaponFlash.enabled) {
+            weaponFlash.intensity = 
+                Mathf.Lerp(weaponFlash.intensity, 0.0f, Time.deltaTime * 8);
+            
+            if (weaponFlash.intensity < 0.05f)
+                weaponFlash.enabled = false;
         }
 	}
 

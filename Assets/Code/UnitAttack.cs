@@ -5,11 +5,8 @@ public class UnitAttack : MonoBehaviour {
 
     UnitControl unitControl;
     Animator animator;
-    InputControl inputControl;
 
     float attackCoolDown = 0.0f;
-
-    public bool useAbsoluteDirection = true;
 
     float aimOffset = 0.0f;
 
@@ -23,6 +20,13 @@ public class UnitAttack : MonoBehaviour {
                 currentWeapon.InUse = isAiming;
         }
     }
+
+    bool shouldBeAiming = false;
+    public bool ShouldBeAiming {
+        get { return shouldBeAiming; }
+        set { shouldBeAiming = value; }
+    }
+
 
     public bool CanAttack {
         get {
@@ -72,9 +76,14 @@ public class UnitAttack : MonoBehaviour {
         get { 
             if (primaryWeapon && primaryWeapon.IsEquipped)
                 return primaryWeapon.FiringPosition;
-
             return transform.position + firingOffset;
         }
+    }
+
+    Vector3 aimingDirection;
+    public Vector3 AimingDirection {
+        get { return aimingDirection; }
+        set { aimingDirection = value; }
     }
 
     public Vector3 FiringDirection {
@@ -93,7 +102,6 @@ public class UnitAttack : MonoBehaviour {
     public void Init () {
         unitControl = GetComponent<UnitControl>();
         animator = GetComponent<Animator>();
-        inputControl = GameManager.instance.InputControl;
     }
 
     void Update () {
@@ -101,27 +109,23 @@ public class UnitAttack : MonoBehaviour {
         if (attackCoolDown > 0)
             attackCoolDown -= Time.deltaTime;
 
-        animator.SetBool("Aiming", inputControl.IsAiming);
+        animator.SetBool("Aiming", shouldBeAiming);
 
-        Vector3 absoluteDir = inputControl.ControllerDirection;
-        Vector3 controllerDir = inputControl.ReticleDirection;
+        Vector3 direction = transform.InverseTransformDirection(aimingDirection);
 
-        Vector3 aimingDirection = transform.InverseTransformDirection(
-            useAbsoluteDirection ? absoluteDir : controllerDir
-        );
             
         float inclinationAngle = Vector3.Angle(
-            new Vector3(aimingDirection.x, 0, aimingDirection.z).normalized,
-            aimingDirection
+            new Vector3(direction.x, 0, direction.z).normalized,
+            direction
         );
 
-        inclinationAngle *= Mathf.Sign(Vector3.Dot(Vector3.up, aimingDirection));
+        inclinationAngle *= Mathf.Sign(Vector3.Dot(Vector3.up, direction));
 
-        float heading = (Mathf.Atan(aimingDirection.x / aimingDirection.z)) 
+        float heading = (Mathf.Atan(direction.x / direction.z)) 
             * Mathf.Rad2Deg;
 
-        if (aimingDirection.z < 0) {
-            heading += 180 * Mathf.Sign(aimingDirection.x);
+        if (direction.z < 0) {
+            heading += 180 * Mathf.Sign(direction.x);
         }
 
         float normalizedAltitude = Mathf.InverseLerp(-20, 20, inclinationAngle);
@@ -137,18 +141,18 @@ public class UnitAttack : MonoBehaviour {
         animator.SetFloat ("Vertical", aimGoal.y + aimOffset);
     }
 
-    public void Attack(bool isFirstPress) {
+    public bool Attack(bool isFirstPress) {
         if (!CanAttack || !primaryWeapon || !primaryWeapon.IsReady || !IsAiming)
-            return;
+            return false;
 
         if (!isFirstPress && primaryWeapon.mode == Weapon.FiringMode.Single) {
             Debug.Log("Not and Auto Weapon");
-            return;
+            return false;
         }
 
         primaryWeapon.Attack();
         aimOffset = 0.15f;
-
+        return true;
     }
 
     public Weapon GetWeapon() {

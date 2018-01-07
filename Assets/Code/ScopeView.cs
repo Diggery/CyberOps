@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScopeView : MonoBehaviour {
 
+    public Color uiColor;
+
     Renderer scopeRenderer;
     FiringUI firingUI;
     Transform scope;
@@ -71,7 +73,7 @@ public class ScopeView : MonoBehaviour {
             float amount = Mathf.SmoothStep(0, 1, openTimer);
 
             scope.localScale = Vector3.Lerp(scopeSizes[0], scopeSizes[1], amount);
-            Color scopeColor = Color.Lerp(Color.black, Color.white, amount);
+            Color scopeColor = Color.Lerp(Color.black, uiColor, amount);
             scopeConnectorRenderer.material.SetColor("_TintColor", scopeColor);
             if (!isOpen && openTimer < 0) {
                 scopeRenderer.enabled = false;

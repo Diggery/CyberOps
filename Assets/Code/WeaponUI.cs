@@ -61,15 +61,12 @@ public class WeaponUI : MonoBehaviour {
         }
     }
 
-    Vector2 magazineHomePos = new Vector2(20.0f, 0.0f);
-    Vector2 magazineExtraPos = new Vector2(24.0f, -1.5f);
+    Vector2 magazineExtraPos = new Vector2(22.0f, -1.5f);
 
     LineRenderer connector;
     Image connectorDot; 
 
-    Vector3 weaponOffset = new Vector3(0.3f, 0.2f, -0.5f);
-
-    Color clearColor = new Color(1, 1, 1, 0);
+    Vector3 weaponOffset = new Vector3(0.3f, 0.2f, -0.25f);
 
     public void Init (WeaponRanged parent) {
         weapon = parent;
@@ -79,7 +76,8 @@ public class WeaponUI : MonoBehaviour {
         canvas = GetComponent<CanvasGroup>();
         connector = transform.Find("Line").GetComponent<LineRenderer>();
         connectorDot = transform.Find("Dot").GetComponent<Image>();
-
+        Text label = transform.Find("WeaponLabel").GetComponent<Text>();
+        label.text = weapon.name.ToUpper();
 
         IsOpen = false;
         UIColor = startColor;
@@ -95,6 +93,11 @@ public class WeaponUI : MonoBehaviour {
 
             transform.position =
                 Vector3.Lerp(transform.position, posGoal, Time.deltaTime * 3);
+
+            Vector3 uiDir = (transform.position - Camera.main.transform.position).normalized;
+            float angle = Vector3.Angle(uiDir, Vector3.forward) * Mathf.Sign(Vector3.Dot(uiDir, Vector3.right));
+
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
 
             connector.SetPosition(0, weapon.FiringPosition);
             connector.SetPosition(1, transform.position);

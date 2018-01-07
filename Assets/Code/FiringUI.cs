@@ -20,7 +20,7 @@ public class FiringUI : MonoBehaviour {
     Renderer midCircleRend;
     Transform farCircle;
     Renderer farCircleRend;
-    Color circleColor = new Color(0.4f, 0.4f, 0.4f, 0.1f);
+    Color circleColor = new Color(0.5f, 0.4f, 0.0f, 0.1f);
 
     bool isOpen = false;
     public bool IsOpen {

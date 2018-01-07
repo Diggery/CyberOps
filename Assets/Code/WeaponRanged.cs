@@ -105,6 +105,11 @@ public class WeaponRanged : Weapon {
         }
     }
 
+    public override void AddWeaponFlash() {
+        base.AddWeaponFlash();
+        weaponFlash.transform.SetParent(muzzle, false);
+    }
+
     public void AddMagazines(int amount) {
         magazines = amount;
         if (weaponUI) weaponUI.Magazines = magazines;
@@ -134,7 +139,12 @@ public class WeaponRanged : Weapon {
 
         muzzleFlash.Flash();
 
-        GameObject projectile = Instantiate(projectilePrefab, FiringPosition, transform.rotation) as GameObject;
+        GameObject projectile = Instantiate(
+            projectilePrefab, 
+            FiringPosition, 
+            transform.rotation
+        ) as GameObject;
+
         Vector3 aimingDirection = FiringDirection;
 
         DamageInfo damageInfo = new DamageInfo(damage, DamageType.Puncture, owner);
@@ -145,6 +155,12 @@ public class WeaponRanged : Weapon {
 
         if (rounds <= 0)
             EjectMagazine();
+
+        if (weaponFlash) {
+            weaponFlash.color = Color.Lerp(Color.white, Color.yellow, Random.value);
+            weaponFlash.enabled = true;
+            weaponFlash.intensity = 5;
+        }
 
     }
 

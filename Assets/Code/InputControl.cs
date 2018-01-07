@@ -25,7 +25,6 @@ public class InputControl : MonoBehaviour {
     }
 
     bool aim;
-
     public bool IsAiming {
         get { return aim;}
         set { 
@@ -103,7 +102,6 @@ public class InputControl : MonoBehaviour {
             HandleReticle();
             HandleAppButton();            
         }
-
 	}
 
     void HandleClick() {
@@ -117,6 +115,8 @@ public class InputControl : MonoBehaviour {
 
     void HandleReticle() {
         IsAiming = GvrControllerInput.IsTouching;
+        playerAttack.AimingDirection = ControllerDirection;
+        playerAttack.ShouldBeAiming = GvrControllerInput.IsTouching;
         firingUI.IsOpen = playerAttack.IsAiming && IsAiming;
     }
 
@@ -128,7 +128,6 @@ public class InputControl : MonoBehaviour {
             LayerMask terrainMask = 1 << LayerMask.NameToLayer("Terrain");
             RaycastHit hit;
             if (Physics.Raycast(cameraControl.GetControllerRay(), out hit, 20, terrainMask)) {
-
                 if (hit.transform.tag.Equals("Map")) {
                     movingUI.SetPos(hit.point);
                 } else {

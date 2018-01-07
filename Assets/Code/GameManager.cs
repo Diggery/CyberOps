@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-
     float gridSize = 5.0f;
     public float GridSize {
         set { gridSize = value; }

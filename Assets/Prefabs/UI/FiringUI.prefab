@@ -747,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d627e13d05a194e389d7988843eb072a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiColor: {r: 1, g: 0.78431374, b: 0, a: 1}
 --- !u!120 &120215541054706302
 LineRenderer:
   m_ObjectHideFlags: 1

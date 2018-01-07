@@ -32,6 +32,7 @@ public class UnitControl : MonoBehaviour {
     }
 
     public bool startAsPlayer = false;
+    public bool addAI = false;
     protected bool isPlayer;
     public bool IsPlayer {
         get { return this == gameManager.ActiveUnit; }
@@ -48,6 +49,8 @@ public class UnitControl : MonoBehaviour {
 
     float hitPoint;
     float maxHits = 10;
+
+    AIController aiControl;
 
     public void Init() {
         gameManager = GameManager.instance;
@@ -78,6 +81,9 @@ public class UnitControl : MonoBehaviour {
 
         if (startAsPlayer)
             gameManager.ActiveUnit = this;
+
+        if (addAI)
+            aiControl = gameObject.AddComponent<AIController>();
 
         InventoryObject.PlayerEntry playerData = 
             gameManager.inventory.GetPlayerEntry(unitName);
@@ -169,15 +175,29 @@ public class UnitControl : MonoBehaviour {
 
         //animator.SetTrigger("GetHit" + damageInfo.GetOrthagonalDirectionName(transform));
         hitPoint -= damageInfo.damageAmount;
-        Debug.Log("Hit Points now " + hitPoint);
 
         if (!isDead && hitPoint < 0) {
             ragdollControl.SwitchToRagdoll(
                 damageInfo.GetDamageDirection(transform),
                 damageInfo.hitTarget
             );
-
+            if (damageInfo.attacker) 
+                damageInfo.attacker.AttackResults("Kill", this);
             Die();
+        } else {
+            if (damageInfo.attacker) 
+                damageInfo.attacker.AttackResults("Hit", this);
+        }
+    }
+
+    public void AttackResults(string result, UnitControl target) {
+        switch (result) {
+            case "Hit":
+                if (aiControl) aiControl.HitTarget(target);
+                break;
+            case "Kill":
+                if (aiControl) aiControl.KilledTarget(target);
+                break;
         }
     }
 
