@@ -19,6 +19,7 @@ public class UnitControl : MonoBehaviour {
     public Transform AttachLeftHand { get; set; }
     public Transform AttachRightBack { get; set; }
     public Transform AttachLeftBack { get; set; }
+    public Transform Torso { get; set; }
 
     string unitName;
     public string teamName = "Team1";
@@ -45,6 +46,12 @@ public class UnitControl : MonoBehaviour {
 
     public bool IsMoving {
         get { return unitMover.IsMoving; }
+    }
+
+    public Vector3 TargetPos {
+        get {
+            return Torso.position;
+        }
     }
 
     float hitPoint;
@@ -181,8 +188,10 @@ public class UnitControl : MonoBehaviour {
                 damageInfo.GetDamageDirection(transform),
                 damageInfo.hitTarget
             );
+
             if (damageInfo.attacker) 
                 damageInfo.attacker.AttackResults("Kill", this);
+            
             Die();
         } else {
             if (damageInfo.attacker) 
@@ -205,14 +214,16 @@ public class UnitControl : MonoBehaviour {
         animator.SetTrigger("Reload");
     }
 
-
-    public void Die() {
-        isDead = true;
-        unitAttack.DropWeapons();
-    }
-
     public void Die(Vector3 dir) {
         ragdollControl.SwitchToRagdoll(dir);
         Die();
     }
+
+    public void Die() {
+        gameObject.tag = "Dead";
+        isDead = true;
+        unitAttack.DropWeapons();
+    }
+
+
 }

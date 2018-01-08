@@ -7,65 +7,17 @@ public class AIController : MonoBehaviour {
     GameManager gameManager;
     UnitControl unitControl;
     UnitAttack unitAttack;
-    UnitMover unitMover;
     MapControl mapControl;
 
-    public GameObject currentTarget;
+    UnitControl currentTarget;
+    public UnitControl CurrentTarget {
+        get { return currentTarget; }
+        set { currentTarget = value; }
+    }
 
     float visualRange = 15.0f;
 
-    public enum AIState { Scanning, Moving, Attacking, Waiting }
-
-    AIState state = AIState.Waiting;
-    public AIState State {
-        get { return state; }
-        set {
-            if (state != value) {
-                switch (value) {
-                    case AIState.Scanning:
-                        state = AIState.Scanning; 
-                        unitAttack.ShouldBeAiming = false;
-
-                        Debug.Log("Entering Scanning State");
-                        break;
-
-                    case AIState.Moving:
-                        state = AIState.Moving;
-
-                        MapCellData safeCell = 
-                            mapControl.GetSafestPosition(
-                                transform.position, 
-                                unitControl.TeamName, 
-                                5
-                            );
-                        
-                        unitControl.MoveTo(safeCell.position);
-
-                        Debug.Log("Entering Moving State");
-
-                        break;
-
-                    case AIState.Attacking:
-                        state = AIState.Attacking;
-                        unitAttack.ShouldBeAiming = true;
-                        Debug.Log("Entering Attacking State");
-
-                        break;
-
-                    case AIState.Waiting:
-                        state = AIState.Waiting;
-                        waitTimer = 
-                            waitTime + Random.Range( -waitTime * 0.25f, waitTime * 0.25f );
-                        Debug.Log("Entering Waiting State");
-
-                        break;
-                }
-            }
-        }
-    }
-        
-
-    bool ReadyToFire {
+    public bool ReadyToFire {
         get {
             return firingCoolDown < 0;
         }
@@ -76,15 +28,44 @@ public class AIController : MonoBehaviour {
     float firingCoolDownTime = 3.0f;
     float firingCoolDown = -1.0f;
 
-    float waitTime = 3.0f;
-    float waitTimer = 0.0f;
+    int missedShots = 0;
+
+    Dictionary<string, AIState> states = new Dictionary<string, AIState>();
+    AIState currentState;
+    public string State {
+        get{
+            return currentState.StateName;
+        }
+        set{
+            if (states.ContainsKey(value)) {
+                if (currentState) currentState.StateExit();
+                currentState = states[value];
+                currentState.StateEnter();
+            } else {
+                Debug.Log("There is no state called " + value);
+            }
+        }
+    }
 
 	void Start () {
         gameManager = GameManager.instance;
         unitAttack = GetComponent<UnitAttack>();
         unitControl = GetComponent<UnitControl>();
-        unitMover = GetComponent<UnitMover>();
         mapControl = gameManager.ActiveMap;
+
+        AIStateWaiting aiStateWaiting = gameObject.AddComponent<AIStateWaiting>();
+        aiStateWaiting.StateInit();
+        states.Add(aiStateWaiting.StateName, aiStateWaiting);
+
+        AIStateMoving aiStateMoving = gameObject.AddComponent<AIStateMoving>();
+        aiStateMoving.StateInit();
+        states.Add(aiStateMoving.StateName, aiStateMoving); 
+
+        AIStateAttacking aiStateAttacking = gameObject.AddComponent<AIStateAttacking>();
+        aiStateAttacking.StateInit();
+        states.Add(aiStateAttacking.StateName, aiStateAttacking);
+
+        State = "Waiting";
 	}
 	
 	void Update () {
@@ -92,49 +73,10 @@ public class AIController : MonoBehaviour {
             firingCoolDown -= Time.deltaTime;
         }
 
-        if (waitTimer > 0) {
-            waitTimer -= Time.deltaTime;
-            if (waitTimer < 0) {
-                
-                State = AIState.Moving;
-            }
-        }
-
-        switch (state) {
-            case AIState.Scanning:
-                currentTarget = ScanForTargets();
-                if (currentTarget) {
-                    State = AIState.Attacking;
-                } else {
-                    State = AIState.Waiting;
-                }
-
-                break;
-
-            case AIState.Moving:
-                if (!unitMover.IsMoving)
-                    State = AIState.Scanning;
-                break;
-
-            case AIState.Attacking:
-                if (!currentTarget)
-                    State = AIState.Scanning;
-                
-                if (ReadyToFire) {
-                    AttackEnemy(currentTarget);
-                }
-                break;
-
-            case AIState.Waiting:
-                waitTimer -= Time.deltaTime;
-                if (waitTimer < 0) {
-                    State = AIState.Scanning;
-                }
-                break;
-        }
+        currentState.StateUpdate();
 	}
 
-    GameObject ScanForTargets() {
+    public UnitControl ScanForTargets() {
         GameObject[] possibleTargets = GameObject.FindGameObjectsWithTag("Unit");
         LayerMask layerMask = 1 << LayerMask.NameToLayer("Terrain");
         float closestDistance = Mathf.Infinity;
@@ -142,50 +84,66 @@ public class AIController : MonoBehaviour {
 
         foreach(GameObject target in possibleTargets) {
 
-            Debug.Log("Scanning " + target.name);
-
             if (target.name.Contains(unitControl.TeamName)) continue;
-            Debug.Log(target.name + " is on the other team");
 
             UnitControl targetControl = target.GetComponent<UnitControl>();
             if (!targetControl || targetControl.IsDead) continue;
-            Debug.Log(target.name + " is not dead");
 
             float targetDistance = Vector3.Distance(
                 target.transform.position, 
                 transform.position
             );
             if (targetDistance > visualRange) continue;
-            Debug.Log(target.name + " is in visual range");
 
             if (closestTarget && closestDistance < targetDistance) continue;
-            Debug.Log(target.name + " is the closest target");
 
             Ray ray = new Ray(
                 transform.position + (Vector3.up * 0.75f),
                 (target.transform.position - transform.position).normalized
             );
 
-            if (!Physics.Raycast(ray, targetDistance, layerMask)) {
+            Debug.DrawRay( ray.origin, ray.direction * targetDistance, Color.green, 1.0f);
 
-                closestDistance = targetDistance;
+            bool canHit = false;
+            if (!canHit) {
+                MapCellData myCell = mapControl.GetData(transform.position);
+                foreach (Vector3 otherPosition in myCell.ExtraFiringPositions) {
+                    ray.origin = otherPosition;
+                    canHit = !Physics.Raycast(ray, targetDistance, layerMask);
+                    if (canHit) break;
+                }            
+            }
+
+            if (canHit) {
                 closestTarget = target;
+                closestDistance = targetDistance;
             }
         }
-        if (closestTarget) 
-            Debug.Log(closestTarget.name + " is the closest target");
+        if (closestTarget) {
+            UnitControl targetControl = closestTarget.GetComponent<UnitControl>();
+            if (!targetControl)
+                Debug.Log(closestTarget.name + " doesn't have a unitControl");
 
-        return closestTarget;
+            return targetControl;
+        } else {
+            Debug.Log(transform.name + "'s scan found noone");
+            return null;
+        }
     }
 
-    void AttackEnemy(GameObject target) {
+    public void AttackEnemy(UnitControl target) {
         unitAttack.ShouldBeAiming = true;
+        Vector3 targetPosition = target.TargetPos;
+
+        Debug.DrawLine(unitAttack.FiringPosition, targetPosition);
+
         unitAttack.AimingDirection = 
-            (target.transform.position - transform.position).normalized;
-        
-        if (ReadyToFire && 
-            Vector3.Dot(unitAttack.FiringDirection, unitAttack.AimingDirection)
-            > 0.95f) {
+            (targetPosition - unitAttack.FiringPosition).normalized;
+
+        Debug.DrawRay(unitAttack.FiringPosition, unitAttack.AimingDirection * 10, Color.red);
+
+        float targetOffset = Vector3.Dot(unitAttack.FiringDirection, unitAttack.AimingDirection);
+        if (ReadyToFire && targetOffset > 0.95f) {
 
             if (unitAttack.Attack(true)) {
                 burstCount--;
@@ -197,14 +155,32 @@ public class AIController : MonoBehaviour {
         } 
     }
 
+    public bool MoveToBetterPositon() {
+        MapControl.SafePositionRequest posRequest = new MapControl.SafePositionRequest(
+            transform.position, unitControl.TeamName, 5);
+        posRequest.excludeCenter = true;
+        MapCellData myCell = mapControl.GetData(transform.position);
+        MapCellData safeCell = mapControl.GetSafestPosition(posRequest);
+        Debug.Log("Checking... " + safeCell.lastScoreCheck + " vs. " +
+                  mapControl.GetCellScore(myCell, unitControl.TeamName));
+        if (safeCell.lastScoreCheck > mapControl.GetCellScore(myCell, unitControl.TeamName)) {
+            unitControl.MoveTo(safeCell.position);
+            State = "Moving";
+            return true;
+        }
+        return false;
+    }
+
     public void HitTarget(UnitControl victim) {
-        
+        Debug.Log(transform.name + " hit " + victim.name);
     }
     public void KilledTarget(UnitControl victim) {
-        if (victim.gameObject.Equals(currentTarget)) {
+        Debug.Log(transform.name + " killed " + victim.name);
+
+        if (victim.Equals(currentTarget)) {
             currentTarget = null;
-            if (State == AIState.Attacking)
-                State = AIState.Scanning;
+            if (State == "Attacking")
+                State = "Waiting";
         }
     }
 }

@@ -36,6 +36,7 @@ public class MapCellData {
     public List<Vector3> AttackablePositions = new List<Vector3>();
     public List<Vector3> ExtraFiringPositions = new List<Vector3>();
     public List<Vector3> ExtraAttackablePositions = new List<Vector3>();
+    public float lastScoreCheck = 0;
 
 
     public CellStatus CurrentStatus { get; set; }

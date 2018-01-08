@@ -5,12 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Unit
-  - Enemy
-  - Friendly
   - Ground
   - HighCover
   - LowCover
   - Map
+  - Dead
   layers:
   - Default
   - TransparentFX

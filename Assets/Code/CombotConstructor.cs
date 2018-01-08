@@ -107,6 +107,8 @@ public class CombotConstructor : MonoBehaviour {
         partGeo.SetParent(geoGroup, false);
         Destroy(part);
 
+        unitControl.Torso = rootSkel.transform.Find("Spine_Skel/Torso_Skel");
+
         partsToInitialize.Add(rootSkel.gameObject);
     }
 

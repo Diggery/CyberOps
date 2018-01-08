@@ -47,7 +47,6 @@ public class MapControl : MonoBehaviour {
 
     public MapCellData GetData(Vector3 mapPos) {
         Vector2 mapCoor = MapPosToCoor(mapPos);
-        Debug.Log("mapPos " + mapPos + " is mapCoor " + mapCoor);
         return GetData(mapCoor);
     }
 
@@ -109,15 +108,38 @@ public class MapControl : MonoBehaviour {
         return mapDataInRange;
     }
 
+    public class SafePositionRequest {
+        public SafePositionRequest(Vector3 newCenter, string newTeamName, float newRange) {
+            center = newCenter;
+            teamName = newTeamName;
+            range = newRange;
+            excludeCenter = false;
+            randomOffset = 0;
+        }
+        public Vector3 center;
+        public string teamName;
+        public float range;
+        public bool excludeCenter;
+        public float randomOffset;
+    }
+
     public MapCellData GetSafestPosition(Vector3 mapPos, string teamName, float range) {
+        return GetSafestPosition(new SafePositionRequest(mapPos, teamName, range));    
+    }
+
+    public MapCellData GetSafestPosition(SafePositionRequest request) {
         MapCellData safestCell = null;
         float bestScore = 0;
-        List<MapCellData> area = GetMapArea(mapPos, range);
+        List<MapCellData> area = GetMapArea(request.center, request.range);
         foreach (MapCellData cell in area) {
             if (cell.CurrentStatus == MapCellData.CellStatus.Collision)
                 continue;
             
-            float cellScore = GetCellScore(cell, teamName);
+            if (request.excludeCenter &&  
+                cell.position == GetData(request.center).position) 
+                continue;
+            
+            float cellScore = GetCellScore(cell, request.teamName) + request.randomOffset;
             if (cellScore > bestScore) {
                 safestCell = cell;
                 bestScore = cellScore;
@@ -125,6 +147,12 @@ public class MapControl : MonoBehaviour {
         }
         return safestCell;
     }
+
+    public float GetCellScore(Vector3 mapPos, string teamName) {
+        MapCellData mapCell = GetData(mapPos);
+        return GetCellScore(mapCell, teamName);
+    }
+
 
     public float GetCellScore(MapCellData mapCell, string teamName) {
         float score = 0.0f;
@@ -134,13 +162,13 @@ public class MapControl : MonoBehaviour {
 
         GameObject[] attackers = GameObject.FindGameObjectsWithTag("Unit");
 
-        foreach (GameObject attacker in attackers) {
-            if (attacker.name.Contains(teamName)) continue;
+        foreach (GameObject enemy in attackers) {
+            if (enemy.name.Contains(teamName)) continue;
                        
-            MapCellData attackerCell = GetData(attacker.transform.position);
-            float sqrDistance = (mapCell.position - attackerCell.position).sqrMagnitude;
+            MapCellData enemyCell = GetData(enemy.transform.position);
+            float sqrDistance = (mapCell.position - enemyCell.position).sqrMagnitude;
 
-            if (mapCell.AttackablePositions.Contains(attackerCell.position)) {
+            if (mapCell.AttackablePositions.Contains(enemyCell.position)) {
                 if (sqrDistance < (16 * gridSize)) {
                     score -= 3.0f;
                 } else if (sqrDistance < (32 * gridSize)) {
@@ -150,7 +178,7 @@ public class MapControl : MonoBehaviour {
                 }
             }
 
-            if (attackerCell.ExtraAttackablePositions.Contains(mapCell.position)) {
+            if (enemyCell.ExtraAttackablePositions.Contains(mapCell.position)) {
                 if (sqrDistance < (16 * gridSize)) {
                     score -= 1.0f;
                 } else if (sqrDistance < (32 * gridSize)) {
@@ -160,12 +188,15 @@ public class MapControl : MonoBehaviour {
                 }
             }
 
+            if (mapCell.ExtraAttackablePositions.Contains(enemyCell.position)) {
+                score += 1.0f;
+            }
 
             if (sqrDistance < (5 * gridSize)) {
                 score -= 5.0f;
             }
         }
-
+        mapCell.lastScoreCheck = score;
         return score;
     }
 
