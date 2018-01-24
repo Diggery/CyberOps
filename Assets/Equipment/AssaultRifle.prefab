@@ -278,4 +278,6 @@ MonoBehaviour:
   mode: 1
   animOverride: {fileID: 0}
   hasWeaponFlash: 1
+  verticleSpray: 3
+  horizontalSpray: 5
   needsUI: 1

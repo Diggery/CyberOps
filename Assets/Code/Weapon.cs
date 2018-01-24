@@ -119,11 +119,9 @@ public class Weapon : MonoBehaviour {
     }        
 
     public virtual void Activate() {
-        Debug.Log(gameObject.name + " is Activated");
     }
 
     public virtual void Deactivate() {
-        Debug.Log(gameObject.name + " is Deactivated");
     }
 
     public virtual void Attack() {

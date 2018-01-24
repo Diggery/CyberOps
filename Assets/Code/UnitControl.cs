@@ -11,7 +11,7 @@ public class UnitControl : MonoBehaviour {
     UnitMover unitMover;
     UnitAttack unitAttack;
 
-    RagdollControl ragdollControl;
+    SkeletonControl skeletonControl;
 
     UnityEngine.AI.NavMeshAgent navAgent;
 
@@ -55,7 +55,7 @@ public class UnitControl : MonoBehaviour {
     }
 
     float hitPoint;
-    float maxHits = 10;
+    float maxHits = 15;
 
     AIController aiControl;
 
@@ -82,9 +82,9 @@ public class UnitControl : MonoBehaviour {
 
         hitPoint = maxHits;
 
-        RagdollConfig ragdollConfig = gameObject.AddComponent<RagdollConfigCombot>();
-        if (ragdollConfig)
-            ragdollControl = ragdollConfig.Init();
+        SkeletonConfig skeletonConfig = gameObject.AddComponent<SkeletonConfigCombot>();
+        if (skeletonConfig)
+            skeletonControl = skeletonConfig.Init();
 
         if (startAsPlayer)
             gameManager.ActiveUnit = this;
@@ -181,10 +181,18 @@ public class UnitControl : MonoBehaviour {
         }
 
         //animator.SetTrigger("GetHit" + damageInfo.GetOrthagonalDirectionName(transform));
-        hitPoint -= damageInfo.damageAmount;
+
+        float damageAmount = damageInfo.damageAmount;
+        if (damageInfo.hitTarget) {
+            string hitTarget = damageInfo.hitTarget.name;
+            damageAmount = skeletonControl.HitPart(hitTarget, damageInfo);
+        }
+
+        hitPoint -= damageAmount;
+
 
         if (!isDead && hitPoint < 0) {
-            ragdollControl.SwitchToRagdoll(
+            skeletonControl.SwitchToRagdoll(
                 damageInfo.GetDamageDirection(transform),
                 damageInfo.hitTarget
             );
@@ -215,7 +223,7 @@ public class UnitControl : MonoBehaviour {
     }
 
     public void Die(Vector3 dir) {
-        ragdollControl.SwitchToRagdoll(dir);
+        skeletonControl.SwitchToRagdoll(dir);
         Die();
     }
 

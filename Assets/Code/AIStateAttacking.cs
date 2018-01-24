@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AIStateAttacking : AIState {
 
+
     public override void StateInit() {
         base.StateInit();
         stateName = "Attacking";
@@ -12,7 +13,6 @@ public class AIStateAttacking : AIState {
     public override void StateEnter() {
         base.StateEnter();
         unitAttack.ShouldBeAiming = true;
-
 
     }
 

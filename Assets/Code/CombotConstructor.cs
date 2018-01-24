@@ -21,7 +21,7 @@ public class CombotConstructor : MonoBehaviour {
     Transform rightLegAttach;
     Transform headAttach;
 
-    List<GameObject> partsToInitialize = new List<GameObject>();
+    List<CombotPart> partsToInitialize = new List<CombotPart>();
 
     public Color combotColor = Color.white;
 
@@ -45,7 +45,7 @@ public class CombotConstructor : MonoBehaviour {
     IEnumerator BindAnimator() {
         yield return new WaitForEndOfFrame();
         animator.Rebind();
-        UnitControl unitControl = GetComponent<UnitControl>();
+        unitControl = GetComponent<UnitControl>();
         SetupAttachPoints(unitControl); 
         unitControl.Init();
         Destroy(this);
@@ -79,10 +79,10 @@ public class CombotConstructor : MonoBehaviour {
     }
 
     void InitializeParts() {
-        foreach(GameObject part in partsToInitialize) {
+        foreach(CombotPart part in partsToInitialize) {
             CombotPart partControl = part.GetComponent<CombotPart>();
             if (partControl) {
-                partControl.Init(unitControl);
+                partControl.Init();
             }
         }
     }
@@ -105,11 +105,21 @@ public class CombotConstructor : MonoBehaviour {
         Transform partGeo = part.transform.Find("Torso_Geo");
         partGeo.GetComponent<Renderer>().material.color = combotColor;
         partGeo.SetParent(geoGroup, false);
-        Destroy(part);
 
         unitControl.Torso = rootSkel.transform.Find("Spine_Skel/Torso_Skel");
 
-        partsToInitialize.Add(rootSkel.gameObject);
+        CombotPart partSetup = part.GetComponent<CombotPart>();
+        CombotPart partControl = rootSkel.gameObject.AddComponent<CombotPart>();
+
+        partControl.Setup(
+            unitControl,
+            CombotPart.Type.Torso,
+            partSetup.maxHealth,
+            partSetup.armor
+        );
+
+        Destroy(part);
+        partsToInitialize.Add(partControl);
     }
 
     void AddArms() {
@@ -118,22 +128,44 @@ public class CombotConstructor : MonoBehaviour {
         part.transform.rotation = transform.rotation;
         part.transform.localScale = transform.localScale;
 
-        Transform partSkel = part.transform.Find("LeftUpperArm_Skel");
-        partSkel.SetParent(leftArmAttach.parent);
+        Transform leftSkel = part.transform.Find("LeftUpperArm_Skel");
+        leftSkel.SetParent(leftArmAttach.parent);
         Destroy(leftArmAttach.gameObject);
 
         Transform partGeo = part.transform.Find("LeftArm_Geo");
         partGeo.SetParent(geoGroup);
 
-        partSkel = part.transform.Find("RightUpperArm_Skel");
-        partSkel.SetParent(rightArmAttach.parent);
+        Transform rightSkel = part.transform.Find("RightUpperArm_Skel");
+        rightSkel.SetParent(rightArmAttach.parent);
         Destroy(rightArmAttach.gameObject);
 
         partGeo = part.transform.Find("RightArm_Geo");
         partGeo.SetParent(geoGroup);
+        CombotPart partSetup = part.GetComponent<CombotPart>();
+        CombotPart rightControl = rightSkel.gameObject.AddComponent<CombotPart>();
+        CombotPart leftControl = leftSkel.gameObject.AddComponent<CombotPart>();
+
+        rightControl.Setup(
+            unitControl, 
+            CombotPart.Type.Arms,
+            partSetup.maxHealth, 
+            partSetup.armor
+        );
+
+        leftControl.Setup(
+            unitControl,
+            CombotPart.Type.Arms,
+            partSetup.maxHealth,
+            partSetup.armor
+        );
+
+        leftControl.SetPair(rightControl);
+        rightControl.SetPair(leftControl);
+
         Destroy(part);
 
-        partsToInitialize.Add(partSkel.gameObject);
+        partsToInitialize.Add(rightControl);
+        partsToInitialize.Add(leftControl);
     }
 
     void AddLegs() {
@@ -153,9 +185,31 @@ public class CombotConstructor : MonoBehaviour {
 
         Transform partGeo = part.transform.Find("Legs_Geo");
         partGeo.SetParent(geoGroup);
+        CombotPart partSetup = part.GetComponent<CombotPart>();
+        CombotPart rightControl = rightSkel.gameObject.AddComponent<CombotPart>();
+        CombotPart leftControl = leftSkel.gameObject.AddComponent<CombotPart>();
+
+        rightControl.Setup(
+            unitControl,
+            CombotPart.Type.Legs,
+            partSetup.maxHealth,
+            partSetup.armor
+        );
+
+        leftControl.Setup(
+            unitControl,
+            CombotPart.Type.Legs,
+            partSetup.maxHealth,
+            partSetup.armor
+        );
+
+        leftControl.SetPair(rightControl);
+        rightControl.SetPair(leftControl);
+
         Destroy(part);
 
-        partsToInitialize.Add(rightSkel.gameObject);
+        partsToInitialize.Add(rightControl);
+        partsToInitialize.Add(leftControl);
 
     }
 
@@ -175,10 +229,20 @@ public class CombotConstructor : MonoBehaviour {
 
         Transform partGeo = part.transform.Find("Head_Geo");
         partGeo.SetParent(geoGroup);
+
+        CombotPart partSetup = part.GetComponent<CombotPart>();
+        CombotPart partControl = partSkel.gameObject.AddComponent<CombotPart>();
+
+        partControl.Setup(
+            unitControl,
+            CombotPart.Type.Head,
+            partSetup.maxHealth,
+            partSetup.armor
+        );
+
         Destroy(part);
 
-        partsToInitialize.Add(partSkel.gameObject);
-
+        partsToInitialize.Add(partControl);
 
     }
 
@@ -194,7 +258,7 @@ public class CombotConstructor : MonoBehaviour {
         }
     }
 
-    void SetupAttachPoints(UnitControl unitControl) {
+    void SetupAttachPoints(UnitControl _unitControl) {
         string pathToLeftBackAttach = 
             "Combot:Combot_Skeleton/" +
             "Combot:RootMotion_Skel/" +
@@ -248,10 +312,10 @@ public class CombotConstructor : MonoBehaviour {
         if (!attachRightHand)
             Debug.Log("Can't find " + pathToRightHandAttach);
 
-        unitControl.AttachRightHand = attachRightHand;
-        unitControl.AttachLeftHand = attachLeftHand;
-        unitControl.AttachLeftBack = attachLeftBack;
-        unitControl.AttachRightBack = attachRightBack;
+        _unitControl.AttachRightHand = attachRightHand;
+        _unitControl.AttachLeftHand = attachLeftHand;
+        _unitControl.AttachLeftBack = attachLeftBack;
+        _unitControl.AttachRightBack = attachRightBack;
 
     }
 }

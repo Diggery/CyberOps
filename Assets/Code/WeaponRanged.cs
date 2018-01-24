@@ -15,6 +15,9 @@ public class WeaponRanged : Weapon {
     MuzzleFlash muzzleFlash;
     Vector3 firingPosition;
 
+    public float verticleSpray = 0;
+    public float horizontalSpray = 0;
+
     public override Vector3 FiringPosition {
         get {
             if (type == WeaponType.Ranged && muzzle)
@@ -146,6 +149,11 @@ public class WeaponRanged : Weapon {
         ) as GameObject;
 
         Vector3 aimingDirection = FiringDirection;
+
+        float vOffset = Random.Range(-verticleSpray, verticleSpray);
+        aimingDirection = Quaternion.AngleAxis(vOffset, Vector3.right) * aimingDirection;
+        float hOffset = Random.Range(-horizontalSpray, horizontalSpray);
+        aimingDirection = Quaternion.AngleAxis(hOffset, Vector3.up) * aimingDirection;
 
         DamageInfo damageInfo = new DamageInfo(damage, DamageType.Puncture, owner);
         projectile.GetComponent<Projectile>().Init(owner, aimingDirection, range, damageInfo);

@@ -47,7 +47,13 @@ public class Projectile : MonoBehaviour {
 	}
 
     void CreateTrail(Vector3 startPos, Vector3 direction, float range) {
-        projectileTrail = (Instantiate(projectileTrailPrefab, startPos, transform.rotation) as GameObject).transform;
+        projectileTrail = (
+            Instantiate(
+                projectileTrailPrefab,
+                startPos,
+                Quaternion.LookRotation(direction)
+            ) as GameObject
+        ).transform;
         projectileTrailRenderer = projectileTrail.GetComponent<Renderer>();
         projectileTrail.localScale = new Vector3(0.1f, 0.1f, range);
         projectileTrailRenderer.material.mainTextureScale = 

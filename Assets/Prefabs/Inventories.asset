@@ -22,8 +22,8 @@ MonoBehaviour:
     prefab: {fileID: 1321868334860546, guid: ec44cec57fbb543428f640fa495a0d07, type: 2}
   - name: WeaponUI
     prefab: {fileID: 1532169219600660, guid: c1e19d3c292d64379a416e4d35f853b2, type: 2}
-  - name: WeaponsBlock
-    prefab: {fileID: 1983764260030408, guid: 749b8999914814647819dac3e0b9ce69, type: 2}
+  - name: Explosion
+    prefab: {fileID: 1775854817600222, guid: 824525108965c4623b055e2615ed4367, type: 2}
   - name: Projectile
     prefab: {fileID: 1582080475069274, guid: 56c3347b48c354c808be782f16595e48, type: 2}
   - name: MovingUI
@@ -41,6 +41,16 @@ MonoBehaviour:
     secondaryWeapon: 
     secondaryMagazines: 0
   - name: BadGuy
+    primaryWeapon: AssaultRifle
+    primaryMagazines: 2
+    secondaryWeapon: 
+    secondaryMagazines: 0
+  - name: SirBeffor
+    primaryWeapon: AssaultRifle
+    primaryMagazines: 2
+    secondaryWeapon: 
+    secondaryMagazines: 0
+  - name: SirSmacksalot
     primaryWeapon: AssaultRifle
     primaryMagazines: 2
     secondaryWeapon: 

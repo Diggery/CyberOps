@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitControlCombot : UnitControl {
 
-    RagdollControl ragdoll;
+    SkeletonControl skeleton;
 
 	void Start () {
 	}
