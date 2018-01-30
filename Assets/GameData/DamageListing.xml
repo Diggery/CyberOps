@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Damage>
+    <Descriptions>
+        <item>cracked</item>
+        <item>broken</item>
+        <item>bent</item>
+        <item>scortched</item>
+        <item>scored</item>
+        <item>punctured</item>
+        <item>fractured</item>
+        <item>shredded</item>
+        <item>crushed</item>
+        <item>ruptured</item>
+        <item>torn</item>
+        <item>smashed</item>
+        <item>missing</item>
+    </Descriptions>
+    <Components>
+        <Head>
+            <item>occulus</item>
+            <item>sensor</item>
+            <item>microphone</item>
+            <item>processor</item>
+            <item>array</item>
+            <item>gyro</item>
+            <item>dampener</item>
+            <item>oscillator</item>
+            <item>dynamo</item>
+            <item>stabilizer</item>
+        </Head>
+        <Generic>
+            <item>plate</item>
+            <item>gear</item>
+            <item>cog</item>
+            <item>linkage</item>
+            <item>panel</item>
+            <item>strut</item>
+            <item>servo</item>
+            <item>power supply</item>
+            <item>heat sink</item>
+            <item>heat sink</item>
+            <item>o-ring</item>
+            <item>coupling</item>
+            <item>worm gear</item>
+            <item>rivet</item>
+            <item>bearing</item>
+            <item>collar</item>
+        </Generic>
+    </Components>
+</Damage>

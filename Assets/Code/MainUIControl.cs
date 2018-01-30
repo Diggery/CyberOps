@@ -6,73 +6,61 @@ public class MainUIControl : MonoBehaviour {
 
 
     bool isOpen = false;
-    public bool IsOpen {
-        get {
-            return isOpen;
-        }
-
-        set {
-            isOpen = value;
-            if (isOpen && openTimer <= 0) 
-                Open();
-            
-            openTimer = Mathf.Clamp01(openTimer);
-
-        }
-    }
-
-    float openTimer = 0;
-    float openDuration = 1.25f;
 
     float lastCamUpAngle = -1.0f;
 
-    CanvasGroup[] panels;
+    float recenterCoolDown = 1.0f;
+
+    UIPanelControl[] panels;
+
+    DamageListControl damageList; 
 
     void Start () {
-        IsOpen = false;
-        panels = GetComponentsInChildren<CanvasGroup>();
+        isOpen = false;
+        panels = GetComponentsInChildren<UIPanelControl>();
+        damageList = transform.Find(
+            "CombotStatusPivot/CombotStatusPanel/DamageList"
+        ).GetComponent<DamageListControl>();
 	}
 	
 	void Update () {
+        if (recenterCoolDown > 0) 
+            recenterCoolDown -= Time.deltaTime;
+        
         Transform mainCam = Camera.main.transform;
         transform.position = mainCam.position;
         float camUpAngle = Vector3.Dot(mainCam.forward, Vector3.up);
-        if (!isOpen && camUpAngle > 0 && lastCamUpAngle < 0) {
-            IsOpen = true;
-        }
-        if (isOpen && camUpAngle < 0 && lastCamUpAngle > 0) {
-            IsOpen = false;
-        }
+
+        if (!isOpen && camUpAngle > 0 && lastCamUpAngle < 0)
+            Open();
+        
+        if (isOpen && camUpAngle < 0 && lastCamUpAngle > 0)
+            Close();
+
         lastCamUpAngle = camUpAngle;
-
-
-
-
-        if (openTimer >= 0.0f && openTimer <= 1.0f) {
-            openTimer += Time.deltaTime / (isOpen ? openDuration : -openDuration);
-            float amount = Mathf.SmoothStep(0, 1, openTimer);
-            foreach (CanvasGroup panel in panels) {
-                panel.alpha = amount;
-            }
-            if (openTimer < 0.0f) {
-                Close();
-            }
-        }
 	}
 
     void Open() {
-        Debug.Log("Opening Panel ");
-
-        foreach (CanvasGroup panel in panels) {
-            panel.gameObject.SetActive(true);
+        isOpen = true;
+        foreach (var panel in panels) panel.IsOpen = true;
+        if (recenterCoolDown <= 0) {
+            float cameraHeading = Camera.main.transform.eulerAngles.y;
+            transform.rotation = Quaternion.AngleAxis(cameraHeading, Vector3.up);
         }
     }
 
     void Close() {
+        isOpen = false;
+        foreach (var panel in panels) panel.IsOpen = false;   
 
-        Debug.Log("Closing Panel");
-        foreach (CanvasGroup panel in panels) {
-            panel.gameObject.SetActive(false);
+        recenterCoolDown = 1.0f;
+    }
+
+    public void AddDamageUI(CombotPart part) {
+        if (!damageList.IsDamageListFull) {
+            DamageEntry entry = damageList.AddEntry(part.name);
+            part.AddDamageMarker(entry);
+
         }
     }
 }

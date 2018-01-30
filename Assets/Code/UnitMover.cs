@@ -46,7 +46,7 @@ public class UnitMover : MonoBehaviour {
         navAgent.radius = GetComponent<CapsuleCollider>().radius;
         navAgent.speed = moveSpeed; 
         navAgent.angularSpeed = turnSpeed; 
-        mapControl = GameManager.instance.ActiveMap;
+        mapControl = GameManager.Instance.ActiveMap;
         animator.SetFloat("MoveSpeed", 1.5f);
     }
 

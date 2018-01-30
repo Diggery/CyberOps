@@ -66,7 +66,7 @@ public class InputControl : MonoBehaviour {
     }
 
 	public void Init () {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         cameraControl = gameManager.CameraControl;
 
         if (!cameraControl)
@@ -79,10 +79,10 @@ public class InputControl : MonoBehaviour {
         laserRenderer =
             reticle.parent.GetComponent<Renderer>();
 
-        GameObject firingUIPrefab = GameManager.instance.GetPrefab("FiringUI");
+        GameObject firingUIPrefab = GameManager.Instance.GetPrefab("FiringUI");
         firingUI = (Instantiate(firingUIPrefab) as GameObject).GetComponent<FiringUI>();
 
-        GameObject movingUIPrefab = GameManager.instance.GetPrefab("MovingUI");
+        GameObject movingUIPrefab = GameManager.Instance.GetPrefab("MovingUI");
         movingUI = (Instantiate(movingUIPrefab) as GameObject).GetComponent<MovingUI>();
 	}
 

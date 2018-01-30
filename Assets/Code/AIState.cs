@@ -24,7 +24,7 @@ public class AIState : MonoBehaviour {
 
 
     public virtual void StateInit() {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         ai = GetComponent<AIController>();
         unitControl = GetComponent<UnitControl>();
         unitAttack = GetComponent<UnitAttack>();

@@ -53,7 +53,7 @@ public class AIController : MonoBehaviour {
     }
 
 	void Start () {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         unitAttack = GetComponent<UnitAttack>();
         unitControl = GetComponent<UnitControl>();
         mapControl = gameManager.ActiveMap;

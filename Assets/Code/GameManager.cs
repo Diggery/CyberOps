@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -43,9 +44,11 @@ public class GameManager : MonoBehaviour {
     public InventoryObject inventory;
     public PartsInventory partsInventory;
 
-    public static GameManager instance;
+    MainUIControl uiControl;
 
-    public GameManager Instance {
+    static GameManager instance;
+
+    public static GameManager Instance {
         get { return instance; }
     }
 
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour {
         CreateInstance();
         CameraControl = GameObject.Find("GvrRoot").GetComponent<CameraControl>();
         Invoke("AddInputControl", 0.1f);
-
+        uiControl = GameObject.Find("GameUIRoot").GetComponent<MainUIControl>();
     }
 
     void AddInputControl() {
@@ -84,5 +87,10 @@ public class GameManager : MonoBehaviour {
         return inventory.GetEquipment(name);
     }
 
+    public void UnitHit(UnitControl unitControl, CombotPart part) {
+        if (unitControl.IsPlayer) {
+            uiControl.AddDamageUI(part);
+        }
+    }
 }
 

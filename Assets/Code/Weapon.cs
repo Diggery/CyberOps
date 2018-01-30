@@ -74,7 +74,7 @@ public class Weapon : MonoBehaviour {
         if (!_owner.IsPlayer)
             hasScope = false;
         
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         coolDown = 1 / attacksPerSecond;
         Debug.Log(owner.name + " recieved an " + gameObject.name);
         if (hasWeaponFlash) Invoke("AddWeaponFlash", 0.1f);

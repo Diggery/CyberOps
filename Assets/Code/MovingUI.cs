@@ -38,7 +38,7 @@ public class MovingUI : MonoBehaviour {
         line = transform.Find("Line");
         tile = transform.Find("Tile");
         lineRenderer = line.GetComponent<Renderer>();
-        mapControl = GameManager.instance.ActiveMap;
+        mapControl = GameManager.Instance.ActiveMap;
 
 	}
 	

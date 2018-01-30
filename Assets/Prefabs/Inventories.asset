@@ -30,6 +30,8 @@ MonoBehaviour:
     prefab: {fileID: 1027952564275234, guid: 8fa4e8abb15ff46aaa6c72ad13b37a8c, type: 2}
   - name: ScopeCam
     prefab: {fileID: 1227326772409714, guid: 3c91fff9e15104efc8bc5843995ec0f3, type: 2}
+  - name: DamageUIEntry
+    prefab: {fileID: 1168013767163702, guid: 36ffcc417a8d24143aefd5408bd3849a, type: 2}
   equipment:
   - name: AssaultRifle
     prefab: {fileID: 1075455355953670, guid: 1bc9df20e6d2b432aa694bbd8162cf1b, type: 2}

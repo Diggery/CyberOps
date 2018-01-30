@@ -56,11 +56,13 @@ public class UnitControl : MonoBehaviour {
 
     float hitPoint;
     float maxHits = 15;
+    float repairCoolDown = 0.0f;
+    float repairCoolDownTime = 3.0f;
 
     AIController aiControl;
 
     public void Init() {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         cameraControl = gameManager.CameraControl;
 
         gameObject.tag = "Unit";
@@ -114,6 +116,15 @@ public class UnitControl : MonoBehaviour {
 
         if (!animator) animator = GetComponent<Animator>();
         animator.SetFloat("Random", Random.value);
+
+        if (repairCoolDown > 0 && skeletonControl.HasDamage) {
+            repairCoolDown -= Time.deltaTime;
+            if (repairCoolDown < 0) {
+                skeletonControl.RepairDamage();
+                repairCoolDown = repairCoolDownTime;
+
+            }
+        }
     }
 
     public bool AddWeapon(string weaponName) {
@@ -185,6 +196,7 @@ public class UnitControl : MonoBehaviour {
         float damageAmount = damageInfo.damageAmount;
         if (damageInfo.hitTarget) {
             string hitTarget = damageInfo.hitTarget.name;
+            gameManager.UnitHit(this, skeletonControl.GetPart(hitTarget));
             damageAmount = skeletonControl.HitPart(hitTarget, damageInfo);
         }
 
@@ -205,6 +217,8 @@ public class UnitControl : MonoBehaviour {
             if (damageInfo.attacker) 
                 damageInfo.attacker.AttackResults("Hit", this);
         }
+
+        repairCoolDown = repairCoolDownTime;
     }
 
     public void AttackResults(string result, UnitControl target) {

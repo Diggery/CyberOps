@@ -35,7 +35,7 @@ public class CombotConstructor : MonoBehaviour {
 
 	public void Init() {
         animator = GetComponent<Animator>();
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         unitControl = GetComponent<UnitControl>();
         Build();
         InitializeParts();

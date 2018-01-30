@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SkeletonControl : MonoBehaviour {
-	
+
     public class CharacterJointConfig {
         public Transform connectedBody;
         public Vector3 axis;
@@ -20,7 +20,7 @@ public class SkeletonControl : MonoBehaviour {
         }
     }
 
-    public enum ColliderType {CapsuleX, CapsuleY, CapsuleZ, Box, Sphere};
+    public enum ColliderType { CapsuleX, CapsuleY, CapsuleZ, Box, Sphere };
 
     public class ColliderData {
         public Vector3 center;
@@ -37,7 +37,7 @@ public class SkeletonControl : MonoBehaviour {
         public CharacterJointConfig joint;
         public JointData(string path, Transform _connectedTo) {
             connectedTo = _connectedTo;
-            transform  = connectedTo.Find(path);
+            transform = connectedTo.Find(path);
             if (!transform)
                 Debug.Log("Can't find " + path + " on " + _connectedTo.name);
             collision = new ColliderData();
@@ -45,7 +45,7 @@ public class SkeletonControl : MonoBehaviour {
         }
         public JointData(Transform _transform) {
             connectedTo = null;
-            transform  = _transform;
+            transform = _transform;
             collision = new ColliderData();
             joint = new CharacterJointConfig();
         }
@@ -64,7 +64,7 @@ public class SkeletonControl : MonoBehaviour {
         public CombotPart rightLegPart;
         public CombotPart headPart;
         public CombotPart torsoPart;
-        public List<JointData> joints = new List<JointData>(); 
+        public List<JointData> joints = new List<JointData>();
     }
 
     Transform root;
@@ -82,8 +82,21 @@ public class SkeletonControl : MonoBehaviour {
     Animator animator;
     GameManager gameManager;
 
+    public bool HasDamage { 
+        get {
+            bool hasDamage =
+                leftArmPart.HasDamage ||
+                rightArmPart.HasDamage ||
+                leftLegPart.HasDamage ||
+                rightLegPart.HasDamage ||
+                headPart.HasDamage ||
+                torsoPart.HasDamage; 
+            return hasDamage;
+        } 
+    }
+
     public void SetUp(SkeletonData setUpData) {
-        
+
         root = setUpData.rootTransform;
         rightHand = setUpData.rightHand;
         leftHand = setUpData.leftHand;
@@ -111,37 +124,37 @@ public class SkeletonControl : MonoBehaviour {
         }
         unitControl = GetComponent<UnitControl>();
         animator = GetComponent<Animator>();
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
     }
 
     void AddCollider(Transform target, JointData data) {
 
         switch (data.collision.type) {
-            case ColliderType.Box :
+            case ColliderType.Box:
                 BoxCollider boxCollider = target.gameObject.AddComponent<BoxCollider>();
                 boxCollider.size = data.collision.size;
                 boxCollider.center = data.collision.center;
                 break;
-            case ColliderType.Sphere :
+            case ColliderType.Sphere:
                 SphereCollider sphereCollider = target.gameObject.AddComponent<SphereCollider>();
                 sphereCollider.radius = data.collision.radius;
                 sphereCollider.center = data.collision.center;
                 break;
-            case ColliderType.CapsuleX :
+            case ColliderType.CapsuleX:
                 CapsuleCollider capsuleXCollider = target.gameObject.AddComponent<CapsuleCollider>();
                 capsuleXCollider.direction = 0;
                 capsuleXCollider.radius = data.collision.radius;
                 capsuleXCollider.center = data.collision.center;
                 capsuleXCollider.height = data.collision.height;
                 break;
-            case ColliderType.CapsuleY :
+            case ColliderType.CapsuleY:
                 CapsuleCollider capsuleYCollider = target.gameObject.AddComponent<CapsuleCollider>();
                 capsuleYCollider.direction = 1;
                 capsuleYCollider.radius = data.collision.radius;
                 capsuleYCollider.center = data.collision.center;
                 capsuleYCollider.height = data.collision.height;
                 break;
-            case ColliderType.CapsuleZ :
+            case ColliderType.CapsuleZ:
                 CapsuleCollider capsuleZCollider = target.gameObject.AddComponent<CapsuleCollider>();
                 capsuleZCollider.direction = 2;
                 capsuleZCollider.radius = data.collision.radius;
@@ -166,28 +179,28 @@ public class SkeletonControl : MonoBehaviour {
 
         AddCollider(data.transform, data);
 
-        if (!data.connectedTo) 
+        if (!data.connectedTo)
             return;
-        
+
         CharacterJoint newCharacterJoint = data.transform.gameObject.AddComponent<CharacterJoint>();
         newCharacterJoint.enableProjection = true;
         newCharacterJoint.connectedBody = data.connectedTo.GetComponent<Rigidbody>();
         newCharacterJoint.anchor = new Vector3(0.0f, 0.0f, 0.0f);
         newCharacterJoint.axis = data.joint.axis;
         newCharacterJoint.swingAxis = data.joint.swingAxis;
-		
+
         SoftJointLimit lowTwistLimit = new SoftJointLimit();
         lowTwistLimit.limit = data.joint.lowTwistLimit;
         newCharacterJoint.lowTwistLimit = lowTwistLimit;
-			
+
         SoftJointLimit highTwistLimit = new SoftJointLimit();
         highTwistLimit.limit = data.joint.highTwistLimit;
         newCharacterJoint.highTwistLimit = highTwistLimit;
-			
+
         SoftJointLimit swing1Limit = new SoftJointLimit();
         swing1Limit.limit = data.joint.swing1Limit;
         newCharacterJoint.swing1Limit = swing1Limit;
-			
+
         SoftJointLimit swing2Limit = new SoftJointLimit();
         swing2Limit.limit = data.joint.swing2Limit;
         newCharacterJoint.swing2Limit = swing2Limit;
@@ -216,14 +229,25 @@ public class SkeletonControl : MonoBehaviour {
             }
 
             currentRigidbody.useGravity = true;
-            currentRigidbody.isKinematic = false;		
+            currentRigidbody.isKinematic = false;
         }
 
         Debug.Log("Adding force to " + forceTarget.name);
         forceTarget.GetComponent<Rigidbody>().AddForce(
-            (direction * -5) + (Vector3.up * 10), 
+            (direction * -5) + (Vector3.up * 10),
             ForceMode.VelocityChange
         );
+    }
+
+    public void RepairDamage() {
+        List<DamageEntry> entries = new List<DamageEntry>();
+        entries.AddRange(leftArmPart.GetDamage());
+        entries.AddRange(rightArmPart.GetDamage());
+        entries.AddRange(leftLegPart.GetDamage());
+        entries.AddRange(rightLegPart.GetDamage());
+        entries.AddRange(headPart.GetDamage());
+        entries.AddRange(torsoPart.GetDamage());
+        entries[Random.Range(0, entries.Count)].Remove();
     }
 
     public void DropWeapons() {
@@ -239,7 +263,7 @@ public class SkeletonControl : MonoBehaviour {
                 child.gameObject.AddComponent<Rigidbody>();
                 child.gameObject.AddComponent<BoxCollider>();
                 child.SetParent(null);
-            }           
+            }
     }
 
     public CombotPart GetPart(string partName) {
@@ -260,7 +284,7 @@ public class SkeletonControl : MonoBehaviour {
                 return rightLegPart;
             }
         } else if (
-            partName.Contains("Hips") || 
+            partName.Contains("Hips") ||
             partName.Contains("Torso")) {
             return torsoPart;
         }
@@ -286,13 +310,13 @@ public class SkeletonControl : MonoBehaviour {
         if (part == null) {
             return false;
         }
-        GameObject explosion1 = Instantiate(
+        Instantiate(
             gameManager.GetPrefab("Explosion"),
             part.transform.position,
             part.transform.rotation,
             part.transform.parent
         );
-        GameObject explosion2 = Instantiate(
+        Instantiate(
             gameManager.GetPrefab("Explosion"),
             part.transform.position,
             part.transform.rotation,
@@ -303,10 +327,10 @@ public class SkeletonControl : MonoBehaviour {
         Rigidbody[] rbs = part.transform.GetComponentsInChildren<Rigidbody>();
         foreach (Rigidbody rb in rbs) {
             rb.useGravity = true;
-            rb.isKinematic = false;       
+            rb.isKinematic = false;
         }
         Destroy(part.GetComponent<CharacterJoint>());
-        part.GetComponent<Rigidbody>().AddForce(Vector3.up * 10,ForceMode.Acceleration);
+        part.GetComponent<Rigidbody>().AddForce(Vector3.up * 10, ForceMode.Acceleration);
         if (part.PartType == CombotPart.Type.Legs || part.PartType == CombotPart.Type.Head) {
             unitControl.Die(Vector3.zero);
         }
@@ -315,7 +339,7 @@ public class SkeletonControl : MonoBehaviour {
     }
 
     public void DisableColliders() {
-        if (!root) 
+        if (!root)
             Debug.Log("Need a root object");
         Collider[] colliders = root.GetComponentsInChildren<Collider>();
         foreach (Collider currentCollider in colliders) {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CombotPart : MonoBehaviour {
 
@@ -14,6 +15,16 @@ public class CombotPart : MonoBehaviour {
 
     protected UnitControl unitControl;
     public SkeletonControl Skeleton { get; set; }
+
+    List<DamageEntry> damageEntries = new List<DamageEntry>();
+
+    public bool HasDamage {
+        get { return damageEntries.Count > 0; }
+    }
+
+    public List<DamageEntry> GetDamage() {
+        return damageEntries;
+    }
 
     CombotPart partPair;
 
@@ -52,5 +63,14 @@ public class CombotPart : MonoBehaviour {
             Skeleton.EjectPart(this);
         
         return damage;
+    }
+
+    public void AddDamageMarker(DamageEntry entry) {
+        entry.Part = this;
+        damageEntries.Add(entry);
+    }
+
+    public void RemoveDamageMarker(DamageEntry entry) {
+        damageEntries.Remove(entry);
     }
 }
